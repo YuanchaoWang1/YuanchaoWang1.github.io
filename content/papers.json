@@ -1,0 +1,130 @@
+[
+  {
+    "id": "cross",
+    "short_title": "CROSS",
+    "title": "CROSS: Verified Peer Corrections for Robust On-Policy Self-Distillation",
+    "authors": [],
+    "year": 2026,
+    "venue": "ICLR 2027 submission",
+    "venue_detail": "International Conference on Learning Representations",
+    "links": [],
+    "note": "Manuscript forthcoming.",
+    "topic": "LLM post-training · On-policy self-distillation",
+    "project_title": "CROSS: learning from verified local corrections",
+    "summary": "CROSS extends the distributional perspective to on-policy self-distillation, where the student model generates its own training distribution and that distribution evolves during learning. It focuses on identifying unreliable trajectories and converting reliable, recoverable local corrections into targeted distillation signals.",
+    "takeaway": "Construct reliable learning signals within a dynamically self-generated training distribution.",
+    "has_diagram": false,
+    "availability": "Manuscript and algorithm overview forthcoming."
+  },
+  {
+    "id": "ectr",
+    "short_title": "ECTR",
+    "title": "Environment-Conditioned Tail Reweighting for Total Variation Invariant Risk Minimization",
+    "authors": [
+      "Yuanchao Wang",
+      "Zhao-Rong Lai",
+      "Tianqi Zhong",
+      "Fengnan Li"
+    ],
+    "year": 2026,
+    "venue": "Under review at NeurIPS 2026",
+    "venue_detail": "Conference on Neural Information Processing Systems",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2601.22944"
+      }
+    ],
+    "note": "",
+    "topic": "OOD generalization · Within-environment robustness",
+    "project_title": "ECTR: making invariance sensitive to the tail",
+    "summary": "Rare or difficult examples can disappear inside an environment's average risk. ECTR learns adversarial sample weights and normalizes them within each environment, then evaluates both prediction loss and the invariance penalty on the same reweighted risks.",
+    "takeaway": "Couple tail robustness and invariant learning through a shared, environment-conditioned measure.",
+    "caption": "Weights emphasize difficult samples inside each environment. Environment-wise KL regularization controls weight concentration; the same weighted risks feed the supervised objective and TV stationarity penalty. Environments may be observed or inferred.",
+    "diagram_alt": "Each environment contains samples of different difficulty. An adversary reweights samples within each environment, subject to KL regularization. The resulting tail risks feed both prediction loss and the TV stationarity penalty in a minimax objective."
+  },
+  {
+    "id": "shellood",
+    "short_title": "ShellOOD",
+    "title": "ShellOOD: Self-Supervised OOD Detection with Radius Shells Guided by Neural Collapse",
+    "authors": [
+      "Yuanchao Wang",
+      "Tian Qin",
+      "Eduardo Valle",
+      "Bruno Abrahao"
+    ],
+    "year": 2026,
+    "venue": "Under review at NeurIPS 2026",
+    "venue_detail": "Conference on Neural Information Processing Systems",
+    "links": [
+      {
+        "label": "Earlier paper (BootOOD)",
+        "url": "https://arxiv.org/abs/2511.13539"
+      }
+    ],
+    "note": "The linked arXiv preprint uses the earlier project title BootOOD (2025).",
+    "topic": "OOD detection · Representation geometry",
+    "project_title": "ShellOOD: learning a geometric boundary",
+    "summary": "ShellOOD learns OOD-aware representations using only in-distribution training data. After classifier warm-up, it mixes features from different classes and uses an auxiliary shell head to organize these synthetic features into inner radius shells around the global feature center.",
+    "takeaway": "Use feature geometry as an auxiliary training signal while retaining the primary classification task.",
+    "caption": "The outer radius represents typical centered ID features; inner shells provide targets for synthetic pseudo-OOD features. The shell head is used only during training. At inference, standard post-hoc scores use the learned features or logits. Geometry is schematic.",
+    "diagram_alt": "Different ID class features lie around an outer reference radius. Cross-class mixup produces synthetic features trained toward inner shells. The ID classifier is retained at inference; the auxiliary shell head is discarded and standard post-hoc OOD scoring is used."
+  },
+  {
+    "id": "ood-tv-irm",
+    "short_title": "OOD-TV-IRM",
+    "title": "Out-of-distribution Generalization for Total Variation based Invariant Risk Minimization",
+    "authors": [
+      "Yuanchao Wang",
+      "Zhao-Rong Lai",
+      "Tianqi Zhong"
+    ],
+    "year": 2025,
+    "venue": "ICLR 2025",
+    "venue_detail": "International Conference on Learning Representations",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2502.19665"
+      },
+      {
+        "label": "Conference",
+        "url": "https://iclr.cc/virtual/2025/poster/29073"
+      }
+    ],
+    "note": "",
+    "topic": "OOD generalization · Invariant learning",
+    "project_title": "OOD-TV-IRM: adapting the invariance penalty",
+    "summary": "OOD-TV-IRM interprets the autonomous total-variation penalty as a Lagrange multiplier. A primal-dual learning scheme jointly updates the feature extractor and the penalty model, balancing prediction risk with pressure toward invariance across environments.",
+    "takeaway": "Make the strength of the invariance constraint part of the learning problem.",
+    "caption": "The primal update reduces the full invariant-risk objective. The dual update strengthens the TV penalty through the learned multiplier. Alternating updates couple predictive learning and invariance; this diagram shows the known-environment form.",
+    "diagram_alt": "Multiple training environments feed a shared feature extractor. Its risks and TV stationarity penalty form a joint objective. A primal descent step updates the feature extractor and a dual ascent step updates the learned penalty multiplier."
+  },
+  {
+    "id": "attention-trees",
+    "short_title": "Attention & trees",
+    "title": "Explaining the Attention Mechanism of End-to-End Speech Recognition Using Decision Trees",
+    "authors": [
+      "Yuanchao Wang",
+      "Wenji Du",
+      "Chenghao Cai",
+      "Yanyan Xu"
+    ],
+    "year": 2021,
+    "venue": "arXiv preprint · 2021",
+    "venue_detail": "",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2110.03879"
+      }
+    ],
+    "note": "",
+    "topic": "Interpretability · Speech recognition",
+    "project_title": "Explaining attention with decision trees",
+    "summary": "This study probes attention dynamics in an encoder-decoder speech recognizer trained on TIMIT. It discretizes attention weights into ten levels and trains decision trees to predict high or low attention from preceding attention states, then inspects the learned decision conditions.",
+    "takeaway": "In the studied system, nearby attention states carry the strongest predictive influence.",
+    "caption": "Extract attention matrices, discretize weights, form history features, and predict high or low attention using Silas decision trees. Influence analysis characterizes temporal dependence in the studied model; it does not establish a general causal law.",
+    "diagram_alt": "A TIMIT speech recognizer produces attention matrices. Attention weights are discretized into ten levels. Previous attention states become features for a decision-tree classifier of high versus low attention. Decision conditions reveal the influence of preceding states."
+  }
+]

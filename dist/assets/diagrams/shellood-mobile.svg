@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 700" role="img" aria-labelledby="title desc">
+<title id="title">ShellOOD: radius-shell self-supervision</title><desc id="desc">ID-only warm-up establishes a reference radius. Cross-class feature mixup and an auxiliary shell head train synthetic features toward inner shells. Only the classifier and backbone are used at inference.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#728497"/></marker></defs>
+<rect width="420" height="700" fill="#f7f9fc"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="25" y="33" font-size="20" fill="#245895" text-anchor="start" font-weight="600">ShellOOD</text>
+<circle cx="210" cy="170" r="90" fill="none" stroke="#245895" stroke-width="1.6"/>
+<circle cx="210" cy="170" r="61.2" fill="none" stroke="#b8c5d4" stroke-width="1.6"/>
+<circle cx="210" cy="170" r="38.7" fill="none" stroke="#b8c5d4" stroke-width="1.6"/>
+<circle cx="210" cy="170" r="3" fill="#596674" stroke="none" stroke-width="1.6"/>
+<circle cx="210.0" cy="80.0" r="5" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="203.0" cy="84.0" r="5" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="216.0" cy="86.0" r="5" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="287.9422863405995" cy="215.0" r="5" fill="#387d7a" stroke="none" stroke-width="1.6"/>
+<circle cx="280.9422863405995" cy="219.0" r="5" fill="#387d7a" stroke="none" stroke-width="1.6"/>
+<circle cx="293.9422863405995" cy="221.0" r="5" fill="#387d7a" stroke="none" stroke-width="1.6"/>
+<circle cx="132.05771365940052" cy="215.0" r="5" fill="#605492" stroke="none" stroke-width="1.6"/>
+<circle cx="125.05771365940052" cy="219.0" r="5" fill="#605492" stroke="none" stroke-width="1.6"/>
+<circle cx="138.05771365940052" cy="221.0" r="5" fill="#605492" stroke="none" stroke-width="1.6"/>
+<circle cx="264.16757893342185" cy="186.75599571769794" r="6" fill="#a85b14" stroke="none" stroke-width="1.6"/>
+<circle cx="198.36157559291388" cy="204.06680315674691" r="6" fill="#a85b14" stroke="none" stroke-width="1.6"/>
+<circle cx="163.7283888530066" cy="134.20631337985094" r="6" fill="#a85b14" stroke="none" stroke-width="1.6"/>
+<circle cx="226.02327015847288" cy="139.78585077437077" r="6" fill="#a85b14" stroke="none" stroke-width="1.6"/>
+<text x="210" y="57" font-size="18" fill="#245895" text-anchor="middle" font-weight="400">Warm up on ID data</text>
+<text x="210" y="295" font-size="17" fill="#245895" text-anchor="middle" font-weight="400">Outer radius: typical ID features</text>
+<text x="210" y="322" font-size="17" fill="#a85b14" text-anchor="middle" font-weight="400">Inner shells: synthetic features</text>
+<rect x="45" y="350" width="330" height="60" rx="8" fill="#fff2e3" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="210.0" y="386.65" font-size="19" fill="#a85b14" text-anchor="middle" font-weight="400">Cross-class feature mixup</text>
+<path d="M210,410 L210,438" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="45" y="438" width="330" height="73" rx="8" fill="#eaf1fa" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="210.0" y="467.8" font-size="18" fill="#245895" text-anchor="middle" font-weight="400">Auxiliary shell supervision</text>
+<text x="210.0" y="493.8" font-size="18" fill="#245895" text-anchor="middle" font-weight="400">Joint training with ID classification</text>
+<path d="M210,511 L210,541" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="45" y="541" width="330" height="95" rx="8" fill="#fff" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="210.0" y="569.45" font-size="17" fill="#202831" text-anchor="middle" font-weight="400">Inference: backbone + classifier</text>
+<text x="210.0" y="594.45" font-size="17" fill="#202831" text-anchor="middle" font-weight="400">Standard post-hoc OOD score</text>
+<text x="210.0" y="619.45" font-size="17" fill="#202831" text-anchor="middle" font-weight="400">Discard the auxiliary shell head</text>
+<text x="210" y="674" font-size="16" fill="#596674" text-anchor="middle" font-weight="400">ID data only · Geometry is schematic</text>
+</g></svg>

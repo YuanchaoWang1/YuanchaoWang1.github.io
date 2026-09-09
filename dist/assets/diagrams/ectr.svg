@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="title desc">
+<title id="title">ECTR: shared environment-conditioned tail risks</title><desc id="desc">An adversary weights hard samples within each environment. Both supervised risk and TV stationarity use the resulting tail risks, with environment-wise KL regularization.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#728497"/></marker></defs>
+<rect width="800" height="480" fill="#f7f9fc"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="25" y="33" font-size="20" fill="#245895" text-anchor="start" font-weight="600">ECTR</text>
+<text x="25" y="59" font-size="16" fill="#596674" text-anchor="start" font-weight="400">Expose hard samples before testing invariance.</text>
+<rect x="25" y="98" width="190" height="95" rx="8" fill="#fff" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="40" y="126" font-size="18" fill="#202831" text-anchor="start" font-weight="600">Environment 1</text>
+<circle cx="50.0" cy="162" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="85.0" cy="162" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="120.0" cy="162" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="155.0" cy="162" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="190.0" cy="162" r="6" fill="#a85b14" stroke="none" stroke-width="1.6"/>
+<rect x="25" y="238" width="190" height="95" rx="8" fill="#fff" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="40" y="266" font-size="18" fill="#202831" text-anchor="start" font-weight="600">Environment 2</text>
+<circle cx="50.0" cy="302" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="85.0" cy="302" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="120.0" cy="302" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="155.0" cy="302" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="190.0" cy="302" r="6" fill="#a85b14" stroke="none" stroke-width="1.6"/>
+<path d="M215,145 L238,145 L238,215 L265,215" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M215,285 L238,285 L238,215" fill="none" stroke="#728497" stroke-width="2"/>
+<rect x="265" y="151" width="240" height="130" rx="8" fill="#eaf1fa" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="385.0" y="196.3" font-size="18" fill="#245895" text-anchor="middle" font-weight="400">Tail adversary</text>
+<text x="385.0" y="222.3" font-size="18" fill="#245895" text-anchor="middle" font-weight="400">Normalize weights</text>
+<text x="385.0" y="248.3" font-size="18" fill="#245895" text-anchor="middle" font-weight="400">within each environment</text>
+<path d="M505,216 L535,216 L535,145 L565,145" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M535,216 L535,285 L565,285" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="565" y="98" width="210" height="95" rx="8" fill="#fff" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="580" y="126" font-size="18" fill="#202831" text-anchor="start" font-weight="600">Tail risk 1</text>
+<circle cx="590.0" cy="162" r="4" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="630.0" cy="162" r="5" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="670.0" cy="162" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="710.0" cy="162" r="9" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="750.0" cy="162" r="13" fill="#a85b14" stroke="none" stroke-width="1.6"/>
+<rect x="565" y="238" width="210" height="95" rx="8" fill="#fff" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="580" y="266" font-size="18" fill="#202831" text-anchor="start" font-weight="600">Tail risk 2</text>
+<circle cx="590.0" cy="302" r="4" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="630.0" cy="302" r="5" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="670.0" cy="302" r="6" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="710.0" cy="302" r="9" fill="#245895" stroke="none" stroke-width="1.6"/>
+<circle cx="750.0" cy="302" r="13" fill="#a85b14" stroke="none" stroke-width="1.6"/>
+<path d="M775,145 L788,145 L788,355 L670,355" fill="none" stroke="#728497" stroke-width="2"/>
+<path d="M670,333 L670,355 L400,355 L400,380" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="25" y="81" font-size="15" fill="#596674" text-anchor="start" font-weight="400">Dot size = sample weight</text>
+<rect x="215" y="380" width="560" height="70" rx="8" fill="#eaf1fa" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="495.0" y="421.3" font-size="18" fill="#245895" text-anchor="middle" font-weight="400">The same tail risks feed prediction loss + TV penalty</text>
+<rect x="25" y="375" width="165" height="80" rx="8" fill="#fff2e3" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="107.5" y="408.45" font-size="17" fill="#a85b14" text-anchor="middle" font-weight="400">KL regularizer</text>
+<text x="107.5" y="433.45" font-size="17" fill="#a85b14" text-anchor="middle" font-weight="400">controls weights</text>
+<path d="M105,375 L105,352 L385,352 L385,281" fill="none" stroke="#728497" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+</g></svg>

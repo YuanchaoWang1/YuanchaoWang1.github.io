@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="title desc">
+<title id="title">OOD-TV-IRM: primal-dual invariant learning</title><desc id="desc">Training environments feed a shared model. Primal descent updates features; dual ascent updates the learned TV multiplier.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#728497"/></marker></defs>
+<rect width="800" height="480" fill="#f7f9fc"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="25" y="33" font-size="20" fill="#245895" text-anchor="start" font-weight="600">OOD-TV-IRM</text>
+<text x="25" y="59" font-size="16" fill="#596674" text-anchor="start" font-weight="400">Learn the invariance penalty together with the model.</text>
+<rect x="25" y="82" width="230" height="55" rx="8" fill="#fff" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="140.0" y="116.15" font-size="19" fill="#202831" text-anchor="middle" font-weight="400">Environment 1</text>
+<rect x="285" y="82" width="230" height="55" rx="8" fill="#fff" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="400.0" y="116.15" font-size="19" fill="#202831" text-anchor="middle" font-weight="400">Environment 2</text>
+<rect x="545" y="82" width="230" height="55" rx="8" fill="#fff" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="660.0" y="116.15" font-size="19" fill="#202831" text-anchor="middle" font-weight="400">Environment 3</text>
+<path d="M140,137 L140,159 L400,159 L400,180" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M400,137 L400,180" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M660,137 L660,159 L400,159" fill="none" stroke="#728497" stroke-width="2"/>
+<rect x="245" y="180" width="310" height="62" rx="8" fill="#eaf1fa" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="400.0" y="217.65" font-size="19" fill="#245895" text-anchor="middle" font-weight="400">Shared feature extractor</text>
+<path d="M400,242 L400,275" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="170" y="275" width="460" height="72" rx="8" fill="#fff" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="400.0" y="317.3" font-size="18" fill="#202831" text-anchor="middle" font-weight="400">Prediction risk + learned weight × TV penalty</text>
+<path d="M300,347 L300,373 L225,373 L225,395" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M500,347 L500,373 L575,373 L575,395" fill="none" stroke="#728497" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="65" y="395" width="320" height="60" rx="8" fill="#eaf1fa" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="225.0" y="431.3" font-size="18" fill="#245895" text-anchor="middle" font-weight="400">Primal descent: update features</text>
+<rect x="415" y="395" width="320" height="60" rx="8" fill="#fff2e3" stroke="#b8c5d4" stroke-width="1.5"/>
+<text x="575.0" y="431.3" font-size="18" fill="#a85b14" text-anchor="middle" font-weight="400">Dual ascent: update penalty</text>
+<path d="M65,425 L40,425 L40,211 L245,211" fill="none" stroke="#728497" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+<path d="M735,425 L765,425 L765,311 L630,311" fill="none" stroke="#728497" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+</g></svg>
