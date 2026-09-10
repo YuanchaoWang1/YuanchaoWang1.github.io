@@ -41,16 +41,16 @@ Windows 也可以使用 `py` 代替 `python`。需要 Python 3.10 或更新版�
 
 ## 关于目标地址
 
-`https://yuanchaowang.github.io` 需要名为 `yuanchaowang` 的 GitHub 用户或组织，并在该账号下建立 `yuanchaowang.github.io` 仓库。仅在 `JohnnyWyc` 下创建同名仓库，对应的通常是 `https://johnnywyc.github.io/yuanchaowang.github.io/`。
+本站目标地址为 `https://yuanchaowang1.github.io`，对应 GitHub 账号 `yuanchaowang1` 及用户主页仓库 `YuanchaoWang1/YuanchaoWang1.github.io`。
 
-本轮已制作完整源码与自动部署配置。当前连接账号是 `JohnnyWyc`，尚未在 GitHub 创建目标远程仓库或启用目标地址。现有 `JohnnyWyc/JohnnyWyc.github.io` 保持原状。
+本地仓库的 `origin` 已连接到该仓库。GitHub Pages 是否已经启用，仍以远程仓库的 **Settings → Pages** 页面为准。
 
 官方说明：[GitHub Pages 的站点类型与命名](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
 
 ## 首次部署到 GitHub Pages
 
 1. 登录控制目标地址的 GitHub 账号。
-2. 新建空的公开仓库 `yuanchaowang.github.io`。首次创建时保持为空，避免自动生成 README。
+2. 新建空的公开仓库 `YuanchaoWang1.github.io`。首次创建时保持为空，避免自动生成 README。
 3. 将此项目所有源文件推送到该仓库的 `main` 分支。
 4. 在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
 5. 打开 **Actions → Deploy homepage to GitHub Pages → Run workflow**。之后每次推送 `main` 都会自动更新网站。
@@ -61,7 +61,7 @@ Windows 也可以使用 `py` 代替 `python`。需要 Python 3.10 或更新版�
 git init -b main
 git add .
 git commit -m "Create academic homepage"
-git remote add origin https://github.com/yuanchaowang/yuanchaowang.github.io.git
+git remote add origin https://github.com/yuanchaowang1/YuanchaoWang1.github.io.git
 git push -u origin main
 ```
 

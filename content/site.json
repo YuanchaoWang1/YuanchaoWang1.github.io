@@ -3,7 +3,7 @@
   "role": "Research Associate",
   "institution": "New York University",
   "email": "yuanchao.wang@nyu.edu",
-  "site_url": "",
+  "site_url": "https://yuanchaowang1.github.io",
   "updated": "September 2026",
   "description": "Yuanchao Wang works on reliable machine learning under distribution shift, from invariant learning and OOD detection to robust on-policy self-distillation.",
   "links": [
@@ -13,7 +13,7 @@
     },
     {
       "label": "GitHub",
-      "url": "https://github.com/JohnnyWyc"
+      "url": "https://github.com/yuanchaowang1"
     },
     {
       "label": "LinkedIn",

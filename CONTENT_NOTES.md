@@ -11,6 +11,8 @@
 
 照片沿用原站 `images/ChatGPT_Image_影棚.png`。邮箱沿用原站公开的 `yuanchao.wang@nyu.edu`。
 
+当前 GitHub 账号与站点仓库已确认为 `yuanchaowang1` 和 `YuanchaoWang1/YuanchaoWang1.github.io`；原仓库链接仅作为内容来源记录保留。
+
 简介采用用户本轮补充的研究轨迹：环境层面的分布偏移、环境内异质性、样本可靠性，以及学生模型动态生成的训练分布。首页按 OOD-TV-IRM、ECTR、ShellOOD、CROSS 顺序给出简要介绍。
 
 ## 论文与 CROSS 占位
@@ -40,10 +42,9 @@ CROSS 全名为 **CROSS: Verified Peer Corrections for Robust On-Policy Self-Dis
 
 ## 下轮可确认的具体字段
 
-1. `yuanchaowang` GitHub 用户或组织的控制权与目标远程仓库。
-2. ECTR 与 ShellOOD 最新非匿名稿件的作者顺序；正式录用后再更新发表状态。
-3. ShellOOD 的公开 arXiv 是否已经更新题目。
-4. CROSS 的 PDF、作者名单及可以公开的方法细节。
-5. 主页中是否继续保留创业经历。
+1. ECTR 与 ShellOOD 最新非匿名稿件的作者顺序；正式录用后再更新发表状态。
+2. ShellOOD 的公开 arXiv 是否已经更新题目。
+3. CROSS 的 PDF、作者名单及可以公开的方法细节。
+4. 主页中是否继续保留创业经历。
 
 首轮 Projects 包含本次四篇 PDF 对应的项目和 CROSS 占位。原仓库草稿中的 Modular Cross-lingual Speech-to-Text Framework 可在提供简述后另加。
