@@ -134,8 +134,8 @@
     "summary": "This study probes attention dynamics in an encoder-decoder speech recognizer trained on TIMIT. It discretizes attention weights into ten levels and trains decision trees to predict high or low attention from preceding attention states, then inspects the learned decision conditions.",
     "takeaway": "In the studied system, nearby attention states carry the strongest predictive influence.",
     "diagram": "attention-trees.png",
-    "diagram_width": 2038,
-    "diagram_height": 772,
+    "diagram_width": 1774,
+    "diagram_height": 887,
     "caption": "Extract attention matrices, discretize weights, form history features, and predict high or low attention using Silas decision trees. Influence analysis characterizes temporal dependence in the studied model; it does not establish a general causal law.",
     "diagram_alt": "A TIMIT speech recognizer produces attention matrices. Attention weights are discretized into ten levels. Previous attention states become features for a decision-tree classifier of high versus low attention. Decision conditions reveal the influence of preceding states."
   }

@@ -113,7 +113,7 @@ def publications():
 
 
 def projects():
-    body = '<h1>Projects</h1><p>From distribution shifts across environments to reliable signals within evolving, student-generated training distributions.</p>'
+    body = '<h1>Projects</h1><p>' + E(SITE['research_question']) + '</p>'
     order = ['ood-tv-irm', 'ectr', 'shellood', 'cross', 'attention-trees']
     papers = {p['id']: p for p in PAPERS}
     body += '<nav class="project-index" aria-label="Project index">' + ''.join(link('#' + key, papers[key]['short_title']) for key in order) + '</nav>'
