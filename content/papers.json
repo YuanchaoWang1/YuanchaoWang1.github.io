@@ -22,9 +22,9 @@
     "title": "Environment-Conditioned Tail Reweighting for Total Variation Invariant Risk Minimization",
     "authors": [
       "Yuanchao Wang",
-      "Zhao-Rong Lai",
       "Tianqi Zhong",
-      "Fengnan Li"
+      "Fengnan Li",
+      "Zhao-Rong Lai"
     ],
     "year": 2026,
     "venue": "Under review at NeurIPS 2026",

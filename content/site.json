@@ -42,12 +42,20 @@
     },
     {
       "organization": "Jinan University",
-      "detail": "Research Assistant · Advisor: Zhao-Rong Lai",
+      "detail": "Research Assistant",
+      "advisor": {
+        "name": "Zhao-Rong Lai",
+        "url": "https://scholar.google.com.hk/citations?user=psPB6TsAAAAJ&hl=en&oi=ao"
+      },
       "date": "Jul 2023 to Apr 2025"
     },
     {
       "organization": "National University of Singapore",
-      "detail": "Research Assistant · Advisor: Cheng-Hao Cai",
+      "detail": "Research Assistant",
+      "advisor": {
+        "name": "Cheng-Hao Cai",
+        "url": "https://www.researchgate.net/profile/Cheng-Hao-Cai"
+      },
       "date": "Jun 2020 to May 2022"
     },
     {

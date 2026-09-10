@@ -63,7 +63,14 @@ def page(title, body, route=''):
 
 
 def records(items):
-    return ''.join(f'<div class="record"><div><strong>{E(x["organization"])}</strong><p>{E(x["detail"])}</p></div><span class="date">{E(x["date"])}</span></div>' for x in items)
+    rendered = []
+    for item in items:
+        detail = E(item['detail'])
+        if item.get('advisor'):
+            advisor = item['advisor']
+            detail += ' · Advisor: ' + link(advisor['url'], advisor['name'])
+        rendered.append(f'<div class="record"><div><strong>{E(item["organization"])}</strong><p>{detail}</p></div><span class="date">{E(item["date"])}</span></div>')
+    return ''.join(rendered)
 
 
 def home():

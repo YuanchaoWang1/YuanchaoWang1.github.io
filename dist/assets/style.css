@@ -30,7 +30,7 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.385;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -73,7 +73,7 @@ h3 {
 h1 {
   margin: 0 0 0.8em;
   font-size: 2em;
-  line-height: 1.15;
+  line-height: 1.105;
   letter-spacing: -0.025em;
 }
 
@@ -82,18 +82,18 @@ h2 {
   padding-bottom: 0.45em;
   border-bottom: 1px solid var(--line);
   font-size: 1.35em;
-  line-height: 1.25;
+  line-height: 1.175;
 }
 
 h3 {
   margin: 0 0 0.45em;
   font-size: 1em;
-  line-height: 1.45;
+  line-height: 1.315;
 }
 
 main {
   min-width: 0;
-  max-width: 1003.2px;
+  max-width: 902.88px;
 }
 
 main a {
@@ -177,7 +177,7 @@ main a {
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(180px, 220px) minmax(0, 1003.2px);
+  grid-template-columns: minmax(180px, 220px) minmax(0, 902.88px);
   align-items: start;
   justify-content: start;
   gap: 4rem;
@@ -211,12 +211,12 @@ main a {
   padding: 0;
   border: 0;
   font-size: 1.18em;
-  line-height: 1.25;
+  line-height: 1.175;
 }
 
 .profile p {
   margin-bottom: 1rem;
-  line-height: 1.5;
+  line-height: 1.35;
 }
 
 .profile-rule {
@@ -264,7 +264,7 @@ main a {
 .page-home .trajectory {
   font-size: 1em;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.455;
 }
 
 .page-home .record {
@@ -284,7 +284,7 @@ main a {
   border-left: 3px solid var(--accent);
   font-size: 1.1em;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.35;
 }
 
 .trajectory {
@@ -400,7 +400,7 @@ main a {
   border: 0;
   font-size: 1.24em;
   font-weight: 700;
-  line-height: 1.38;
+  line-height: 1.266;
 }
 
 .authors {
@@ -408,7 +408,7 @@ main a {
   color: var(--muted);
   font-size: 1em;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.385;
 }
 
 .authors strong {
@@ -431,7 +431,7 @@ main a {
   background: #5b21b6;
   border: 1px solid #4c1d95;
   border-radius: 0.5rem;
-  line-height: 1.3;
+  line-height: 1.21;
 }
 
 .venue-detail {
@@ -456,7 +456,7 @@ main a {
   margin: 0.75em 0 0;
   color: var(--muted);
   font-size: 0.9em;
-  line-height: 1.55;
+  line-height: 1.385;
 }
 
 .project-index {
@@ -516,7 +516,7 @@ main a {
   margin-top: 0.65rem;
   color: var(--muted);
   font-size: 0.77em;
-  line-height: 1.5;
+  line-height: 1.35;
 }
 
 .takeaway {
@@ -546,7 +546,7 @@ main a {
 
 @media (min-width: 1041px) {
   .project figure {
-    width: min(960px, calc(100vw - 320px));
+    width: min(864px, calc(100vw - 320px));
   }
 }
 
