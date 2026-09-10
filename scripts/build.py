@@ -68,9 +68,8 @@ def records(items):
 
 def home():
     body = '<p class="eyebrow">About</p><h1>' + E(SITE['name']) + '</h1>'
-    for i, paragraph in enumerate(SITE['bio']):
-        body += f'<p class="{"intro" if i == 0 else "bio"}">{E(paragraph)}</p>'
-    body += f'<p class="research-question">{E(SITE["research_question"])}</p><p>{E(SITE["research_text"])}</p>'
+    for paragraph in SITE['bio']:
+        body += f'<p class="bio">{E(paragraph)}</p>'
     if SITE.get('trajectory'):
         body += '<h2>Research trajectory</h2><ul class="trajectory">'
         for item in SITE['trajectory']:
@@ -85,8 +84,10 @@ def home():
     page('Home', body)
 
 
-def paper_links(p):
+def paper_links(p, project_link=False):
     links = ''.join(link(x['url'], x['label']) for x in p['links'])
+    if project_link:
+        links += link('../projects/index.html#' + p['id'], 'Project overview')
     return '<div class="paper-links">' + links + '</div>' if links else ''
 
 
@@ -94,15 +95,13 @@ def publications():
     body = '<h1>Publications</h1><p class="publication-intro">Conference papers, manuscripts, and preprints.</p><section class="publication-list" aria-label="Publication list">'
     for p in sorted(PAPERS, key=lambda paper: paper['year'], reverse=True):
         authors = ', '.join(f'<strong>{E(a)}</strong>' if a == SITE['name'] else E(a) for a in p['authors'])
-        # Link updated project names to their matching overview, not to an older differently titled PDF.
-        title_url = '../projects/index.html#' + p['id'] if p['id'] == 'shellood' or not p['links'] else p['links'][0]['url']
-        body += f'<article class="publication" id="{E(p["id"])}"><h2>{link(title_url,p["title"])}</h2>'
+        body += f'<article class="publication" id="{E(p["id"])}"><h2>{E(p["title"])}</h2>'
         if authors:
             body += f'<p class="authors">{authors}</p>'
         body += f'<p class="venue">{E(p["venue"])}</p>'
         if p['venue_detail']:
             body += '<p class="venue-detail">' + E(p['venue_detail']) + '</p>'
-        body += paper_links(p)
+        body += paper_links(p, project_link=True)
         if p['note']:
             body += '<p class="paper-note">' + E(p['note']) + '</p>'
         body += '</article>'

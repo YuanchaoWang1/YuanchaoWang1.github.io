@@ -3,8 +3,8 @@
   --ink: #000;
   --heading: #000;
   --muted: #000;
-  --accent: #2563eb;
-  --accent-dark: #0645ad;
+  --accent: #0ea5e9;
+  --accent-dark: #0284c7;
   --line: #e7e8e9;
   --line-strong: #bdc1c4;
   --soft: #f6f7f7;
@@ -126,9 +126,14 @@ main a {
 
 .wordmark {
   color: var(--heading);
-  font-size: 1em;
+  font-size: 1.12em;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.wordmark:hover {
+  color: var(--heading);
+  text-decoration: none;
 }
 
 .masthead nav {
@@ -142,12 +147,12 @@ main a {
 .masthead nav a {
   position: relative;
   padding: 0.4rem 0;
-  color: var(--accent-dark);
+  color: var(--heading);
 }
 
 .masthead nav a:hover,
 .masthead nav a[aria-current="page"] {
-  color: var(--accent);
+  color: var(--heading);
   text-decoration: none;
 }
 
@@ -246,14 +251,10 @@ main a {
   font-size: 1.1em;
 }
 
-.page-home .intro {
-  font-size: 1.1em;
-  font-weight: 500;
-  line-height: 1.65;
-}
-
 .page-home .bio,
 .page-home .trajectory {
+  font-size: 1em;
+  font-weight: 400;
   line-height: 1.65;
 }
 
@@ -389,16 +390,6 @@ main a {
   line-height: 1.38;
 }
 
-.publication h2 a {
-  color: var(--accent-dark);
-  text-decoration: none;
-}
-
-.publication h2 a:hover {
-  color: var(--accent);
-  text-decoration: underline;
-}
-
 .authors {
   margin: 0.5em 0;
   color: var(--muted);
@@ -423,9 +414,9 @@ main a {
   display: inline-block;
   margin: 0.55em 0 0.5em;
   padding: 0.28em 0.68em;
-  color: #6d28d9;
-  background: #f5f3ff;
-  border: 1px solid #c4b5fd;
+  color: #fff;
+  background: #5b21b6;
+  border: 1px solid #4c1d95;
   border-radius: 0.5rem;
   line-height: 1.3;
 }
