@@ -92,7 +92,7 @@ h3 {
 
 main {
   min-width: 0;
-  max-width: 760px;
+  max-width: 912px;
 }
 
 main a {
@@ -168,7 +168,7 @@ main a {
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(180px, 220px) minmax(0, 760px);
+  grid-template-columns: minmax(180px, 220px) minmax(0, 912px);
   align-items: start;
   justify-content: start;
   gap: 4rem;
