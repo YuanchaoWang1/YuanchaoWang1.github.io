@@ -136,11 +136,19 @@ main a {
   text-decoration: none;
 }
 
+.page-home .masthead-inner {
+  justify-content: flex-end;
+}
+
+.page-home .wordmark {
+  display: none;
+}
+
 .masthead nav {
   display: flex;
   align-items: center;
   gap: 1.75rem;
-  font-size: 0.88em;
+  font-size: 0.94em;
   font-weight: 600;
 }
 
@@ -466,7 +474,7 @@ main a {
 }
 
 .project {
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.55rem;
   padding-top: 2rem;
   scroll-margin-top: 5.5rem;
 }
@@ -573,7 +581,7 @@ main a {
 
   .masthead nav {
     gap: 1.1rem;
-    font-size: 0.82em;
+    font-size: 0.88em;
   }
 
   .layout {
