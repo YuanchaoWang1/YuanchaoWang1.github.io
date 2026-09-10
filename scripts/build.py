@@ -85,10 +85,8 @@ def home():
     page('Home', body)
 
 
-def paper_links(p, project_link=True):
+def paper_links(p):
     links = ''.join(link(x['url'], x['label']) for x in p['links'])
-    if project_link:
-        links += link('../projects/index.html#' + p['id'], 'Project overview')
     return '<div class="paper-links">' + links + '</div>' if links else ''
 
 
@@ -114,14 +112,14 @@ def publications():
 
 def projects():
     body = '<h1>Projects</h1><p>' + E(SITE['research_question']) + '</p>'
-    order = ['ood-tv-irm', 'ectr', 'shellood', 'cross', 'attention-trees']
+    order = ['cross', 'ood-tv-irm', 'ectr', 'shellood', 'attention-trees']
     papers = {p['id']: p for p in PAPERS}
     body += '<nav class="project-index" aria-label="Project index">' + ''.join(link('#' + key, papers[key]['short_title']) for key in order) + '</nav>'
     for key in order:
         p = papers[key]
         body += f'<article class="project" id="{key}"><p class="project-topic">{E(p["topic"])}</p><h2>{E(p["project_title"])}</h2>'
         body += f'<p class="venue">{E(p["venue"])}</p>'
-        body += paper_links(p, False)
+        body += paper_links(p)
         body += f'<p class="project-description">{E(p["summary"])}</p>'
         if p.get('has_diagram', True):
             diagram = p.get('diagram', f'{key}.svg')

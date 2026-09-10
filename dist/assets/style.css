@@ -1,10 +1,10 @@
 /* Academic Pages-inspired typography and layout, adapted for this static site. */
 :root {
-  --ink: #494e52;
-  --heading: #2f3336;
-  --muted: #6f777d;
-  --accent: #2f7f93;
-  --accent-dark: #245f6e;
+  --ink: #000;
+  --heading: #000;
+  --muted: #000;
+  --accent: #2563eb;
+  --accent-dark: #0645ad;
   --line: #e7e8e9;
   --line-strong: #bdc1c4;
   --soft: #f6f7f7;
@@ -142,12 +142,12 @@ main a {
 .masthead nav a {
   position: relative;
   padding: 0.4rem 0;
-  color: var(--muted);
+  color: var(--accent-dark);
 }
 
 .masthead nav a:hover,
 .masthead nav a[aria-current="page"] {
-  color: var(--heading);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -178,7 +178,7 @@ main a {
   position: sticky;
   top: 6.1rem;
   color: var(--muted);
-  font-size: 0.82em;
+  font-size: 0.94em;
 }
 
 .portrait {
@@ -220,11 +220,11 @@ main a {
 }
 
 .profile-links a {
-  color: var(--muted);
+  color: var(--accent-dark);
 }
 
 .profile-links a:hover {
-  color: var(--accent-dark);
+  color: var(--accent);
 }
 
 .eyebrow {
@@ -242,7 +242,7 @@ main a {
 }
 
 .page-home main {
-  color: #3f4448;
+  color: var(--ink);
   font-size: 1.1em;
 }
 
@@ -264,7 +264,7 @@ main a {
 .page-home .record p,
 .page-home .date,
 .page-home .muted {
-  color: #5e656a;
+  color: var(--ink);
 }
 
 .research-question {
@@ -362,6 +362,10 @@ main a {
   font-size: 1.06em;
 }
 
+.page-publications main {
+  font-size: 1.1em;
+}
+
 .publication-list {
   margin-top: 2.35rem;
 }
@@ -386,12 +390,12 @@ main a {
 }
 
 .publication h2 a {
-  color: var(--heading);
+  color: var(--accent-dark);
   text-decoration: none;
 }
 
 .publication h2 a:hover {
-  color: var(--accent-dark);
+  color: var(--accent);
   text-decoration: underline;
 }
 
@@ -410,15 +414,30 @@ main a {
 
 .venue {
   margin: 0.45em 0;
-  color: var(--accent-dark);
+  color: var(--ink);
   font-size: 0.96em;
   font-weight: 700;
+}
+
+.page-publications .venue {
+  display: inline-block;
+  margin: 0.55em 0 0.5em;
+  padding: 0.28em 0.68em;
+  color: #6d28d9;
+  background: #f5f3ff;
+  border: 1px solid #c4b5fd;
+  border-radius: 0.5rem;
+  line-height: 1.3;
 }
 
 .venue-detail {
   margin: -0.15em 0 0.75em;
   color: var(--muted);
   font-size: 0.9em;
+}
+
+.page-publications .venue-detail {
+  margin-top: 0;
 }
 
 .paper-links {

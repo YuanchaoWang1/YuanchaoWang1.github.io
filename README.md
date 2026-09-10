@@ -36,7 +36,7 @@ Windows 也可以使用 `py` 代替 `python`。需要 Python 3.10 或更新版�
 | `/projects/` | 四个已有论文项目的介绍与算法图，以及 CROSS 占位介绍 |
 | `/research/` | 兼容原名称，跳转到 Publications |
 
-导航和资源使用相对路径，兼容用户主页与仓库子路径。Projects 提供五个稳定锚点：`#ood-tv-irm`、`#ectr`、`#shellood`、`#cross`、`#attention-trees`。
+导航和资源使用相对路径，兼容用户主页与仓库子路径。Projects 将 CROSS 排在最上方，并提供五个稳定锚点：`#cross`、`#ood-tv-irm`、`#ectr`、`#shellood`、`#attention-trees`。
 
 ## 关于目标地址
 
