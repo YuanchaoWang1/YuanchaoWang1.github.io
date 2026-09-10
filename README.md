@@ -13,20 +13,19 @@
 | 排版、字体、颜色、手机布局 | `dist/assets/style.css` |
 | 照片 | `dist/assets/portrait.png` |
 | 页面结构与导航 | `scripts/build.py` |
-| 算法示意图 | `scripts/draw_diagrams.py` |
+| 算法示意图 | `dist/assets/diagrams/` 中直接维护的高分辨率 PNG |
 | GitHub 自动部署 | `.github/workflows/pages.yml` |
 
 修改后，在仓库根目录运行：
 
 ```sh
-python scripts/draw_diagrams.py
 python scripts/build.py
 python scripts/check_site.py
 ```
 
-Windows 也可以使用 `py` 代替 `python`。需要 Python 3.10 或更新版本，无需安装第三方包。若仅改文字，可跳过绘图命令。
+Windows 也可以使用 `py` 代替 `python`。需要 Python 3.10 或更新版本，无需安装第三方包。
 
-生成的 HTML 和 SVG 都纳入 Git。`dist/assets/style.css` 与照片属于直接维护的源文件，生成脚本不会覆盖。请修改 JSON 后重新生成 HTML；直接修改生成的 HTML 会在下次生成时被覆盖。
+生成的 HTML 和 PNG 都纳入 Git。`dist/assets/style.css`、照片和上传的 PNG 示意图属于直接维护的源文件，生成脚本不会覆盖。请修改 JSON 后重新生成 HTML；直接修改生成的 HTML 会在下次生成时被覆盖。
 
 ## 页面结构
 
@@ -88,16 +87,17 @@ git push -u origin main
 | `links` | 已有的论文、会议、代码等链接 |
 | `summary` / `takeaway` | 项目简述与核心思想 |
 | `caption` / `diagram_alt` | 图注和无障碍替代说明 |
+| `diagram` / `diagram_width` / `diagram_height` | 自定义图文件名及其原始像素尺寸 |
 | `has_diagram` | 设为 `false` 时允许仅有文字的项目占位 |
 | `availability` | 待补材料的简短说明 |
 
-新加项目时，补齐同名桌面和手机 SVG，并在 `scripts/build.py` 的 `projects()` 中更新 `order` 列表。首页不重复整份论文目录，所有论文集中在 Publications。
+新加项目时，在 `dist/assets/diagrams/` 中加入图片并在论文条目中填写图文件名与尺寸，同时在 `scripts/build.py` 的 `projects()` 中更新 `order` 列表。首页不重复整份论文目录，所有论文集中在 Publications。
 
 CROSS 当前设置 `has_diagram: false`、空的 `links` 和 `authors`，因此不会生成虚构的论文链接、作者名单或算法图。取得 PDF 后补齐作者、链接与方法图，并把 `has_diagram` 改为 `true`。首页研究轨迹单独在 `content/site.json` 的 `trajectory` 字段维护。
 
 ### 修改算法图
 
-四幅图都是 SVG，文字与线条可缩放。每幅有桌面横版和手机竖版，由 `scripts/draw_diagrams.py` 生成。调整该脚本后重新运行即可；也可以使用矢量编辑器处理 SVG，此时需同步维护生成脚本或取消对应生成步骤。
+四个项目均使用直接维护的高分辨率 PNG：`ood-tv-irm.png`、`ectr.png`、`shellood.png` 和 `attention-trees.png`。图片按原始宽高比响应式缩放，并在宽屏上获得更大的展示区域；项目页同时提供全尺寸入口。替换时保持稳定文件名，或同步更新 `content/papers.json` 中的 `diagram` 与尺寸字段。
 
 这些图展示算法关系，点的位置、大小和注意力矩阵均为示意，未展示实验测量值。项目页图注说明了省略的细节。
 
@@ -111,10 +111,10 @@ git commit -m "Update homepage content"
 git push
 ```
 
-如果同时改了算法图，先运行 `python scripts/draw_diagrams.py`。更新 `content/site.json` 的 `updated` 字段，以显示新的维护月份。
+更新 `content/site.json` 的 `updated` 字段，以显示新的维护月份。
 
 ## 本轮内容核对
 
 详细来源、发表状态与需要下轮确认的字段见 [CONTENT_NOTES.md](CONTENT_NOTES.md)。正式发表条目为 **ICLR 2025**；根据本轮用户补充，ECTR 和 ShellOOD 标为 **Under review at NeurIPS 2026**，CROSS 标为 **ICLR 2027 submission**。CROSS 的 2026 年分组表示当前稿件年份。ShellOOD 使用新名称，并明确标出公开链接仍指向早期 BootOOD 版本。
 
-页面的本地路径、锚点与 SVG 结构由 `scripts/check_site.py` 检查。算法图已做渲染检查；GitHub Pages 工作流需在目标远程仓库创建并启用 Pages 后首次运行。
+页面的本地路径、锚点、PNG 文件结构和标注尺寸由 `scripts/check_site.py` 检查。算法图已做内容核对；GitHub Pages 工作流需在目标远程仓库创建并启用 Pages 后首次运行。

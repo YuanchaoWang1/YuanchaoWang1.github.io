@@ -40,6 +40,9 @@
     "project_title": "ECTR: making invariance sensitive to the tail",
     "summary": "Rare or difficult examples can disappear inside an environment's average risk. ECTR learns adversarial sample weights and normalizes them within each environment, then evaluates both prediction loss and the invariance penalty on the same reweighted risks.",
     "takeaway": "Couple tail robustness and invariant learning through a shared, environment-conditioned measure.",
+    "diagram": "ectr.png",
+    "diagram_width": 1916,
+    "diagram_height": 821,
     "caption": "Weights emphasize difficult samples inside each environment. Environment-wise KL regularization controls weight concentration; the same weighted risks feed the supervised objective and TV stationarity penalty. Environments may be observed or inferred.",
     "diagram_alt": "Each environment contains samples of different difficulty. An adversary reweights samples within each environment, subject to KL regularization. The resulting tail risks feed both prediction loss and the TV stationarity penalty in a minimax objective."
   },
@@ -67,6 +70,9 @@
     "project_title": "ShellOOD: learning a geometric boundary",
     "summary": "ShellOOD learns OOD-aware representations using only in-distribution training data. After classifier warm-up, it mixes features from different classes and uses an auxiliary shell head to organize these synthetic features into inner radius shells around the global feature center.",
     "takeaway": "Use feature geometry as an auxiliary training signal while retaining the primary classification task.",
+    "diagram": "shellood.png",
+    "diagram_width": 1672,
+    "diagram_height": 941,
     "caption": "The outer radius represents typical centered ID features; inner shells provide targets for synthetic pseudo-OOD features. The shell head is used only during training. At inference, standard post-hoc scores use the learned features or logits. Geometry is schematic.",
     "diagram_alt": "Different ID class features lie around an outer reference radius. Cross-class mixup produces synthetic features trained toward inner shells. The ID classifier is retained at inference; the auxiliary shell head is discarded and standard post-hoc OOD scoring is used."
   },
@@ -97,6 +103,9 @@
     "project_title": "OOD-TV-IRM: adapting the invariance penalty",
     "summary": "OOD-TV-IRM interprets the autonomous total-variation penalty as a Lagrange multiplier. A primal-dual learning scheme jointly updates the feature extractor and the penalty model, balancing prediction risk with pressure toward invariance across environments.",
     "takeaway": "Make the strength of the invariance constraint part of the learning problem.",
+    "diagram": "ood-tv-irm.png",
+    "diagram_width": 1916,
+    "diagram_height": 821,
     "caption": "The primal update reduces the full invariant-risk objective. The dual update strengthens the TV penalty through the learned multiplier. Alternating updates couple predictive learning and invariance; this diagram shows the known-environment form.",
     "diagram_alt": "Multiple training environments feed a shared feature extractor. Its risks and TV stationarity penalty form a joint objective. A primal descent step updates the feature extractor and a dual ascent step updates the learned penalty multiplier."
   },
@@ -124,6 +133,9 @@
     "project_title": "Explaining attention with decision trees",
     "summary": "This study probes attention dynamics in an encoder-decoder speech recognizer trained on TIMIT. It discretizes attention weights into ten levels and trains decision trees to predict high or low attention from preceding attention states, then inspects the learned decision conditions.",
     "takeaway": "In the studied system, nearby attention states carry the strongest predictive influence.",
+    "diagram": "attention-trees.png",
+    "diagram_width": 2038,
+    "diagram_height": 772,
     "caption": "Extract attention matrices, discretize weights, form history features, and predict high or low attention using Silas decision trees. Influence analysis characterizes temporal dependence in the studied model; it does not establish a general causal law.",
     "diagram_alt": "A TIMIT speech recognizer produces attention matrices. Attention weights are discretized into ten levels. Previous attention states become features for a decision-tree classifier of high versus low attention. Decision conditions reveal the influence of preceding states."
   }

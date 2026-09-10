@@ -125,10 +125,18 @@ def projects():
         body += paper_links(p, False)
         body += f'<p class="project-description">{E(p["summary"])}</p>'
         if p.get('has_diagram', True):
-            body += f'<figure><picture><source media="(max-width: 960px)" srcset="../assets/diagrams/{key}-mobile.svg"><img class="diagram" src="../assets/diagrams/{key}.svg" alt="{E(p["diagram_alt"])}" loading="lazy" width="800" height="480"></picture><figcaption>{E(p["caption"])}</figcaption></figure>'
+            diagram = p.get('diagram', f'{key}.svg')
+            mobile_diagram = p.get('diagram_mobile')
+            if mobile_diagram is None and 'diagram' not in p:
+                mobile_diagram = f'{key}-mobile.svg'
+            source = f'<source media="(max-width: 960px)" srcset="../assets/diagrams/{E(mobile_diagram, quote=True)}">' if mobile_diagram else ''
+            width = p.get('diagram_width', 800)
+            height = p.get('diagram_height', 480)
+            body += f'<figure><picture>{source}<img class="diagram" src="../assets/diagrams/{E(diagram, quote=True)}" alt="{E(p["diagram_alt"])}" loading="lazy" width="{width}" height="{height}"></picture><figcaption>{E(p["caption"])}</figcaption></figure>'
         body += f'<p class="takeaway"><strong>Core idea.</strong> {E(p["takeaway"])}</p>'
         if p.get('has_diagram', True):
-            body += f'<a class="diagram-link" href="../assets/diagrams/{key}.svg">Open full-size diagram (SVG)</a>'
+            diagram = p.get('diagram', f'{key}.svg')
+            body += f'<a class="diagram-link" href="../assets/diagrams/{E(diagram, quote=True)}">Open full-size diagram</a>'
         elif p.get('availability'):
             body += f'<p class="paper-note">{E(p["availability"])}</p>'
         body += '</article>'

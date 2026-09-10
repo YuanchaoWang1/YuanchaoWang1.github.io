@@ -21,8 +21,6 @@ jobs:
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Generate diagrams
-        run: python3 scripts/draw_diagrams.py
       - name: Generate pages
         env:
           SITE_URL: ${{ steps.pages.outputs.base_url }}
@@ -47,4 +45,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

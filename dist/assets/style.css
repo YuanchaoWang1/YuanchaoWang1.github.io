@@ -443,12 +443,14 @@ main a {
 }
 
 .project figure {
+  width: 100%;
   margin: 1.5rem 0 1rem;
 }
 
 .diagram {
   display: block;
   width: 100%;
+  height: auto;
   background: var(--soft);
   border: 1px solid var(--line);
   border-radius: 3px;
@@ -483,6 +485,12 @@ main a {
 @media (min-width: 1200px) {
   body {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1041px) {
+  .project figure {
+    width: min(960px, calc(100vw - 320px));
   }
 }
 

@@ -33,6 +33,8 @@ CROSS 全名为 **CROSS: Verified Peer Corrections for Robust On-Policy Self-Dis
 
 ## 示意图的事实范围
 
+2026-09-11，OOD-TV-IRM、ECTR、ShellOOD 和 Attention 的示意图均已替换为用户提供的高分辨率 PNG。
+
 - **OOD-TV-IRM**：突出已知环境下的 shared feature extractor、prediction risk、TV penalty 与 primal-dual updates。没有把 TV penalty 画成风险方差，也没有声称对任意未知分布均有保证。
 - **ECTR**：环境内归一化的对抗样本权重同时用于 supervised risk 与 TV stationarity penalty；KL 控制权重集中。图展示训练信号的共用关系，省略更新顺序与潜环境扩展。
 - **ShellOOD**：ID-only warm-up、cross-class feature mixup、inner shells、辅助 shell head；推理阶段保留 backbone 与 classifier，使用标准 post-hoc scores。图中的半径为训练几何示意，未把径向阈值当作论文唯一的推理规则。
