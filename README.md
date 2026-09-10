@@ -32,7 +32,7 @@ Windows 也可以使用 `py` 代替 `python`。需要 Python 3.10 或更新版�
 | 路径 | 用途 |
 | --- | --- |
 | `/` | 简介、研究主线、教育、经历、奖项和服务 |
-| `/publications/` | 按年份排列的论文，展示会议名称或预印本状态；无论文配图 |
+| `/publications/` | 按时间倒序排列的单列论文列表，展示会议名称或预印本状态；无年份分组和论文配图 |
 | `/projects/` | 四个已有论文项目的介绍与算法图，以及 CROSS 占位介绍 |
 | `/research/` | 兼容原名称，跳转到 Publications |
 
@@ -82,7 +82,7 @@ git push -u origin main
 | --- | --- |
 | `id` | 稳定项目标识，同时对应图文件名与锚点 |
 | `title` / `authors` | 论文题目与完整作者顺序 |
-| `year` | Publications 分组年份 |
+| `year` | Publications 的倒序排列依据 |
 | `venue` / `venue_detail` | 会议简称及完整名称，或稿件状态 |
 | `links` | 已有的论文、会议、代码等链接 |
 | `summary` / `takeaway` | 项目简述与核心思想 |

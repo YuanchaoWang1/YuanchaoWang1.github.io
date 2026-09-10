@@ -18,6 +18,7 @@ def link(url, label):
 
 def page(title, body, route=''):
     prefix = '../' if route else ''
+    page_class = 'page-' + (route or 'home')
     nav = []
     for name, target in [('Home', ''), ('Publications', 'publications'), ('Projects', 'projects')]:
         href = prefix + (target + '/' if target else '') + 'index.html'
@@ -39,7 +40,7 @@ def page(title, body, route=''):
 <meta property="og:type" content="website">{meta}
 <link rel="stylesheet" href="{prefix}assets/style.css">
 </head>
-<body>
+<body class="{page_class}">
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead"><div class="masthead-inner">
 <a class="wordmark" href="{prefix}index.html">{E(SITE['name'])}</a>
@@ -92,24 +93,22 @@ def paper_links(p, project_link=True):
 
 
 def publications():
-    body = '<h1>Publications</h1><p class="muted">Conference papers, manuscripts, and preprints.</p>'
-    for year in sorted({p['year'] for p in PAPERS}, reverse=True):
-        body += f'<section class="year-group" aria-labelledby="year-{year}"><h2 class="year" id="year-{year}">{year}</h2><div>'
-        for p in (p for p in PAPERS if p['year'] == year):
-            authors = ', '.join(f'<strong>{E(a)}</strong>' if a == SITE['name'] else E(a) for a in p['authors'])
-            # Link updated project names to their matching overview, not to an older differently titled PDF.
-            title_url = '../projects/index.html#' + p['id'] if p['id'] == 'shellood' or not p['links'] else p['links'][0]['url']
-            body += f'<article class="publication" id="{E(p["id"])}"><h3>{link(title_url,p["title"])}</h3>'
-            if authors:
-                body += f'<p class="authors">{authors}</p>'
-            body += f'<p class="venue">{E(p["venue"])}</p>'
-            if p['venue_detail']:
-                body += '<p class="venue-detail">' + E(p['venue_detail']) + '</p>'
-            body += paper_links(p)
-            if p['note']:
-                body += '<p class="paper-note">' + E(p['note']) + '</p>'
-            body += '</article>'
-        body += '</div></section>'
+    body = '<h1>Publications</h1><p class="publication-intro">Conference papers, manuscripts, and preprints.</p><section class="publication-list" aria-label="Publication list">'
+    for p in sorted(PAPERS, key=lambda paper: paper['year'], reverse=True):
+        authors = ', '.join(f'<strong>{E(a)}</strong>' if a == SITE['name'] else E(a) for a in p['authors'])
+        # Link updated project names to their matching overview, not to an older differently titled PDF.
+        title_url = '../projects/index.html#' + p['id'] if p['id'] == 'shellood' or not p['links'] else p['links'][0]['url']
+        body += f'<article class="publication" id="{E(p["id"])}"><h2>{link(title_url,p["title"])}</h2>'
+        if authors:
+            body += f'<p class="authors">{authors}</p>'
+        body += f'<p class="venue">{E(p["venue"])}</p>'
+        if p['venue_detail']:
+            body += '<p class="venue-detail">' + E(p['venue_detail']) + '</p>'
+        body += paper_links(p)
+        if p['note']:
+            body += '<p class="paper-note">' + E(p['note']) + '</p>'
+        body += '</article>'
+    body += '</section>'
     page('Publications', body, 'publications')
 
 
