@@ -92,7 +92,7 @@ h3 {
 
 main {
   min-width: 0;
-  max-width: 912px;
+  max-width: 1003.2px;
 }
 
 main a {
@@ -117,7 +117,7 @@ main a {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1340px;
   min-height: 68px;
   margin: 0 auto;
   padding: 0.75rem 1rem;
@@ -168,12 +168,12 @@ main a {
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(180px, 220px) minmax(0, 912px);
+  grid-template-columns: minmax(180px, 220px) minmax(0, 1003.2px);
   align-items: start;
   justify-content: start;
   gap: 4rem;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1340px;
   min-height: calc(100vh - 150px);
   margin: 0 auto;
   padding: 3rem 1rem 5rem;
@@ -336,7 +336,7 @@ main a {
   justify-content: space-between;
   gap: 1rem;
   width: calc(100% - 2rem);
-  max-width: 1248px;
+  max-width: 1308px;
   margin: 0 auto;
   padding: 1.25rem 0 2.5rem;
   color: var(--muted);
@@ -364,6 +364,10 @@ main a {
 }
 
 .page-publications main {
+  font-size: 1.1em;
+}
+
+.page-projects main {
   font-size: 1.1em;
 }
 

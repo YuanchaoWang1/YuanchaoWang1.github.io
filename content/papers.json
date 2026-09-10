@@ -65,7 +65,7 @@
         "url": "https://arxiv.org/abs/2511.13539"
       }
     ],
-    "note": "The linked arXiv preprint uses the earlier project title BootOOD (2025).",
+    "note": "",
     "topic": "OOD detection · Representation geometry",
     "project_title": "ShellOOD: learning a geometric boundary",
     "summary": "ShellOOD learns OOD-aware representations using only in-distribution training data. After classifier warm-up, it mixes features from different classes and uses an auxiliary shell head to organize these synthetic features into inner radius shells around the global feature center.",
