@@ -18,6 +18,7 @@
 
 html {
   min-height: 100%;
+  zoom: 75%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
