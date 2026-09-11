@@ -6,13 +6,10 @@
     "authors": [],
     "year": 2026,
     "venue": "ICLR 2027 submission",
-    "venue_detail": "International Conference on Learning Representations",
     "links": [],
     "note": "Manuscript forthcoming.",
     "topic": "LLM post-training · On-policy self-distillation",
-    "project_title": "CROSS: learning from verified local corrections",
     "summary": "CROSS extends the distributional perspective to on-policy self-distillation, where the student model generates its own training distribution and that distribution evolves during learning. It focuses on identifying unreliable trajectories and converting reliable, recoverable local corrections into targeted distillation signals.",
-    "takeaway": "Construct reliable learning signals within a dynamically self-generated training distribution.",
     "has_diagram": false,
     "availability": "Manuscript and algorithm overview forthcoming."
   },
@@ -28,7 +25,6 @@
     ],
     "year": 2026,
     "venue": "Under review at NeurIPS 2026",
-    "venue_detail": "Conference on Neural Information Processing Systems",
     "links": [
       {
         "label": "Paper",
@@ -37,9 +33,7 @@
     ],
     "note": "",
     "topic": "OOD generalization · Within-environment robustness",
-    "project_title": "ECTR: making invariance sensitive to the tail",
     "summary": "Rare or difficult examples can disappear inside an environment's average risk. ECTR learns adversarial sample weights and normalizes them within each environment, then evaluates both prediction loss and the invariance penalty on the same reweighted risks.",
-    "takeaway": "Couple tail robustness and invariant learning through a shared, environment-conditioned measure.",
     "diagram": "ectr.png",
     "diagram_width": 1916,
     "diagram_height": 821,
@@ -58,7 +52,6 @@
     ],
     "year": 2026,
     "venue": "Under review at NeurIPS 2026",
-    "venue_detail": "Conference on Neural Information Processing Systems",
     "links": [
       {
         "label": "Earlier paper (BootOOD)",
@@ -67,9 +60,7 @@
     ],
     "note": "",
     "topic": "OOD detection · Representation geometry",
-    "project_title": "ShellOOD: learning a geometric boundary",
     "summary": "ShellOOD learns OOD-aware representations using only in-distribution training data. After classifier warm-up, it mixes features from different classes and uses an auxiliary shell head to organize these synthetic features into inner radius shells around the global feature center.",
-    "takeaway": "Use feature geometry as an auxiliary training signal while retaining the primary classification task.",
     "diagram": "shellood.png",
     "diagram_width": 1672,
     "diagram_height": 941,
@@ -87,7 +78,6 @@
     ],
     "year": 2025,
     "venue": "ICLR 2025",
-    "venue_detail": "International Conference on Learning Representations",
     "links": [
       {
         "label": "Paper",
@@ -100,9 +90,7 @@
     ],
     "note": "",
     "topic": "OOD generalization · Invariant learning",
-    "project_title": "OOD-TV-IRM: adapting the invariance penalty",
     "summary": "OOD-TV-IRM interprets the autonomous total-variation penalty as a Lagrange multiplier. A primal-dual learning scheme jointly updates the feature extractor and the penalty model, balancing prediction risk with pressure toward invariance across environments.",
-    "takeaway": "Make the strength of the invariance constraint part of the learning problem.",
     "diagram": "ood-tv-irm.png",
     "diagram_width": 1916,
     "diagram_height": 821,
@@ -121,7 +109,6 @@
     ],
     "year": 2021,
     "venue": "arXiv preprint · 2021",
-    "venue_detail": "",
     "links": [
       {
         "label": "Paper",
@@ -130,9 +117,7 @@
     ],
     "note": "",
     "topic": "Interpretability · Speech recognition",
-    "project_title": "Explaining attention with decision trees",
     "summary": "This study probes attention dynamics in an encoder-decoder speech recognizer trained on TIMIT. It discretizes attention weights into ten levels and trains decision trees to predict high or low attention from preceding attention states, then inspects the learned decision conditions.",
-    "takeaway": "In the studied system, nearby attention states carry the strongest predictive influence.",
     "diagram": "attention-trees.png",
     "diagram_width": 1774,
     "diagram_height": 887,

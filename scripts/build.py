@@ -106,8 +106,6 @@ def publications():
         if authors:
             body += f'<p class="authors">{authors}</p>'
         body += f'<p class="venue">{E(p["venue"])}</p>'
-        if p['venue_detail']:
-            body += '<p class="venue-detail">' + E(p['venue_detail']) + '</p>'
         body += paper_links(p, project_link=True)
         if p['note']:
             body += '<p class="paper-note">' + E(p['note']) + '</p>'
@@ -117,13 +115,13 @@ def publications():
 
 
 def projects():
-    body = '<h1>Projects</h1><p>' + E(SITE['research_question']) + '</p>'
+    body = '<h1>Projects</h1><p class="project-question">' + E(SITE['research_question']) + '</p>'
     order = ['cross', 'ood-tv-irm', 'ectr', 'shellood', 'attention-trees']
     papers = {p['id']: p for p in PAPERS}
     body += '<nav class="project-index" aria-label="Project index">' + ''.join(link('#' + key, papers[key]['short_title']) for key in order) + '</nav>'
     for key in order:
         p = papers[key]
-        body += f'<article class="project" id="{key}"><p class="project-topic">{E(p["topic"])}</p><h2>{E(p["project_title"])}</h2>'
+        body += f'<article class="project" id="{key}"><p class="project-topic">{E(p["topic"])}</p><h2>{E(p["title"])}</h2>'
         body += f'<p class="venue">{E(p["venue"])}</p>'
         body += paper_links(p)
         body += f'<p class="project-description">{E(p["summary"])}</p>'
@@ -136,7 +134,6 @@ def projects():
             width = p.get('diagram_width', 800)
             height = p.get('diagram_height', 480)
             body += f'<figure><picture>{source}<img class="diagram" src="../assets/diagrams/{E(diagram, quote=True)}" alt="{E(p["diagram_alt"])}" loading="lazy" width="{width}" height="{height}"></picture><figcaption>{E(p["caption"])}</figcaption></figure>'
-        body += f'<p class="takeaway"><strong>Core idea.</strong> {E(p["takeaway"])}</p>'
         if p.get('has_diagram', True):
             diagram = p.get('diagram', f'{key}.svg')
             body += f'<a class="diagram-link" href="../assets/diagrams/{E(diagram, quote=True)}">Open full-size diagram</a>'

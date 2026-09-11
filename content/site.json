@@ -38,6 +38,10 @@
     {
       "organization": "New York University",
       "detail": "Research Associate",
+      "advisor": {
+        "name": "Hongyi Wen",
+        "url": "https://scholar.google.com/citations?user=Kf9y87sAAAAJ&hl=en"
+      },
       "date": "May 2025 to present"
     },
     {

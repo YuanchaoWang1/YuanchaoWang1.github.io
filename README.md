@@ -83,9 +83,9 @@ git push -u origin main
 | `id` | 稳定项目标识，同时对应图文件名与锚点 |
 | `title` / `authors` | 论文题目与完整作者顺序 |
 | `year` | Publications 的倒序排列依据 |
-| `venue` / `venue_detail` | 会议简称及完整名称，或稿件状态 |
+| `venue` | 会议简称、预印本类型或稿件状态 |
 | `links` | 已有的论文、会议、代码等链接 |
-| `summary` / `takeaway` | 项目简述与核心思想 |
+| `summary` | 项目简述；Projects 直接使用论文原题作为项目名称 |
 | `caption` / `diagram_alt` | 图注和无障碍替代说明 |
 | `diagram` / `diagram_width` / `diagram_height` | 自定义图文件名及其原始像素尺寸 |
 | `has_diagram` | 设为 `false` 时允许仅有文字的项目占位 |

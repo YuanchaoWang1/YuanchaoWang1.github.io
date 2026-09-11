@@ -19,15 +19,15 @@
 
 | 条目 | 首轮处理 | 依据 |
 | --- | --- | --- |
-| OOD-TV-IRM | ICLR 2025，显示完整会议名 | 附件首页、[arXiv](https://arxiv.org/abs/2502.19665) |
+| OOD-TV-IRM | ICLR 2025 | 附件首页、[arXiv](https://arxiv.org/abs/2502.19665) |
 | ECTR | Under review at NeurIPS 2026 | 用户本轮明确补充审稿状态；[arXiv](https://arxiv.org/abs/2601.22944) |
 | ShellOOD | Under review at NeurIPS 2026 | 用户本轮明确补充审稿状态；[公开版本](https://arxiv.org/abs/2511.13539)仍题为 BootOOD |
 | Attention & decision trees | arXiv preprint，2021 | 附件 arXiv:2110.03879v1，未显示已确认的正式出版会议或期刊 |
 | CROSS | ICLR 2027 submission；无 PDF 占位 | 用户提供完整题目与研究简介；未提供作者名单与算法细节 |
 
-ECTR 原主页的作者顺序与公开 arXiv 元数据不同。本轮采用公开 arXiv 顺序：Yuanchao Wang, Zhao-Rong Lai, Tianqi Zhong, Fengnan Li。ShellOOD 作者沿用公开 BootOOD 的作者名单，最新附件为匿名稿，后续可据非匿名终稿确认。
+ECTR 原主页的作者顺序与公开 arXiv 元数据不同。根据用户确认，当前顺序为：Yuanchao Wang, Tianqi Zhong, Fengnan Li, Zhao-Rong Lai。ShellOOD 作者沿用公开 BootOOD 的作者名单，最新附件为匿名稿，后续可据非匿名终稿确认。
 
-四个 Paper 链接均指向公开的论文入口。附件供方法理解和重新绘图使用，未将匿名投稿 PDF 放入站点目录。ShellOOD 的链接标签明确为 Earlier paper (BootOOD)，其题目点击后进入当前项目介绍。
+四个 Paper 链接均指向公开的论文入口。附件供方法理解和重新绘图使用，未将匿名投稿 PDF 放入站点目录。ShellOOD 的链接标签明确为 Earlier paper (BootOOD)，Project overview 链接进入当前项目介绍。
 
 CROSS 全名为 **CROSS: Verified Peer Corrections for Robust On-Policy Self-Distillation**。题目与简介已纳入 Publications 和 Projects；作者名单留空，不展示 PDF 按钮，不编造算法图。投稿状态采用用户最后补充的 ICLR 2027 submission 表述，未写成录用或正式发表。
 
