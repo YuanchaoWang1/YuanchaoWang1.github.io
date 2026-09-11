@@ -122,7 +122,6 @@ def projects():
     for key in order:
         p = papers[key]
         body += f'<article class="project" id="{key}"><p class="project-topic">{E(p["topic"])}</p><h2>{E(p["title"])}</h2>'
-        body += f'<p class="venue">{E(p["venue"])}</p>'
         body += paper_links(p)
         body += f'<p class="project-description">{E(p["summary"])}</p>'
         if p.get('has_diagram', True):

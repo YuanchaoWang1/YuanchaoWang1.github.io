@@ -294,6 +294,7 @@ main a {
 .record {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
   column-gap: 1.5rem;
   padding: 0.7em 0;
   border-bottom: 1px solid var(--line);
@@ -315,9 +316,11 @@ main a {
 }
 
 .date {
-  padding-top: 0.05em;
+  align-self: start;
+  padding-top: 0;
   color: var(--muted);
   font-size: 0.9em;
+  line-height: 1.385;
   white-space: nowrap;
 }
 
