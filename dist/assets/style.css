@@ -47,6 +47,7 @@ a:hover {
 }
 
 a:focus-visible,
+button:focus-visible,
 summary:focus-visible {
   outline: 3px solid #cf780a;
   outline-offset: 4px;
@@ -520,6 +521,44 @@ main a {
   border-color: var(--line-strong);
 }
 
+.diagram-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+}
+
+.diagram-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.diagram-lightbox-close {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem;
+  place-items: center;
+  background: transparent;
+  border: 0;
+  cursor: zoom-out;
+}
+
+.diagram-lightbox-image {
+  display: block;
+  max-width: 96%;
+  max-height: 92%;
+  object-fit: contain;
+  background: var(--paper);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+}
+
 .project figcaption {
   margin-top: 0.65rem;
   color: var(--muted);
@@ -663,6 +702,10 @@ main a {
     flex-wrap: wrap;
     margin: 0 1.25rem;
     width: calc(100% - 2.5rem);
+  }
+
+  .diagram-lightbox-close {
+    padding: 1rem;
   }
 }
 

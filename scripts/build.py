@@ -118,7 +118,7 @@ def projects():
     body = '<h1>Projects</h1><p class="project-question">' + E(SITE['research_question']) + '</p>'
     order = ['cross', 'ood-tv-irm', 'ectr', 'shellood', 'attention-trees']
     papers = {p['id']: p for p in PAPERS}
-    body += '<nav class="project-index" aria-label="Project index">' + ''.join(link('#' + key, papers[key]['short_title']) for key in order) + '</nav>'
+    body += '<nav class="project-index" aria-label="Research topics">' + ''.join(link('#' + key, papers[key]['category']) for key in order) + '</nav>'
     for key in order:
         p = papers[key]
         body += f'<article class="project" id="{key}"><p class="project-topic">{E(p["topic"])}</p><h2>{E(p["title"])}</h2>'
@@ -137,6 +137,7 @@ def projects():
         elif p.get('availability'):
             body += f'<p class="paper-note">{E(p["availability"])}</p>'
         body += '</article>'
+    body += '<dialog class="diagram-lightbox" id="diagram-lightbox" aria-label="Full-size project diagram"><button class="diagram-lightbox-close" type="button" aria-label="Close full-size diagram"><img class="diagram-lightbox-image" alt="Expanded project diagram"></button></dialog><script src="../assets/diagram-lightbox.js"></script>'
     page('Projects', body, 'projects')
 
 

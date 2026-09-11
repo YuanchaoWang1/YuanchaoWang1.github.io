@@ -82,6 +82,7 @@ git push -u origin main
 | --- | --- |
 | `id` | 稳定项目标识，同时对应图文件名与锚点 |
 | `title` / `authors` | 论文题目与完整作者顺序 |
+| `category` / `topic` | Projects 顶部研究主题索引及每个项目的详细分类 |
 | `year` | Publications 的倒序排列依据 |
 | `venue` | 会议简称、预印本类型或稿件状态 |
 | `links` | 已有的论文、会议、代码等链接 |
