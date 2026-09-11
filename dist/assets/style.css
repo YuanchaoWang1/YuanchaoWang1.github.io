@@ -506,15 +506,25 @@ main a {
   border-radius: 3px;
 }
 
+.diagram-image-link {
+  display: block;
+  border-radius: 3px;
+  cursor: zoom-in;
+}
+
+.diagram-image-link:hover {
+  text-decoration: none;
+}
+
+.diagram-image-link:hover .diagram {
+  border-color: var(--line-strong);
+}
+
 .project figcaption {
   margin-top: 0.65rem;
   color: var(--muted);
   font-size: 0.77em;
   line-height: 1.35;
-}
-
-.diagram-link {
-  font-size: 0.78em;
 }
 
 .muted {

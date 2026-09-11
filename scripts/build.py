@@ -132,10 +132,8 @@ def projects():
             source = f'<source media="(max-width: 960px)" srcset="../assets/diagrams/{E(mobile_diagram, quote=True)}">' if mobile_diagram else ''
             width = p.get('diagram_width', 800)
             height = p.get('diagram_height', 480)
-            body += f'<figure><picture>{source}<img class="diagram" src="../assets/diagrams/{E(diagram, quote=True)}" alt="{E(p["diagram_alt"])}" loading="lazy" width="{width}" height="{height}"></picture><figcaption>{E(p["caption"])}</figcaption></figure>'
-        if p.get('has_diagram', True):
-            diagram = p.get('diagram', f'{key}.svg')
-            body += f'<a class="diagram-link" href="../assets/diagrams/{E(diagram, quote=True)}">Open full-size diagram</a>'
+            diagram_url = '../assets/diagrams/' + E(diagram, quote=True)
+            body += f'<figure><a class="diagram-image-link" href="{diagram_url}" aria-label="Open full-size diagram for {E(p["title"], quote=True)}"><picture>{source}<img class="diagram" src="{diagram_url}" alt="{E(p["diagram_alt"])}" loading="lazy" width="{width}" height="{height}"></picture></a><figcaption>{E(p["caption"])}</figcaption></figure>'
         elif p.get('availability'):
             body += f'<p class="paper-note">{E(p["availability"])}</p>'
         body += '</article>'
