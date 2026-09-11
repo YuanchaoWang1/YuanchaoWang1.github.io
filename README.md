@@ -33,7 +33,7 @@ Windows 也可以使用 `py` 代替 `python`。需要 Python 3.10 或更新版�
 | --- | --- |
 | `/` | 简介、研究主线、教育、经历、奖项和服务 |
 | `/publications/` | 按时间倒序排列的单列论文列表，展示会议名称或预印本状态；无年份分组和论文配图 |
-| `/projects/` | 四个已有论文项目的介绍与算法图，以及 CROSS 占位介绍 |
+| `/projects/` | 五个论文项目的介绍与算法图 |
 | `/research/` | 兼容原名称，跳转到 Publications |
 
 导航和资源使用相对路径，兼容用户主页与仓库子路径。Projects 将 CROSS 排在最上方，并提供五个稳定锚点：`#cross`、`#ood-tv-irm`、`#ectr`、`#shellood`、`#attention-trees`。
@@ -94,7 +94,7 @@ git push -u origin main
 
 新加项目时，在 `dist/assets/diagrams/` 中加入图片并在论文条目中填写图文件名与尺寸，同时在 `scripts/build.py` 的 `projects()` 中更新 `order` 列表。首页不重复整份论文目录，所有论文集中在 Publications。
 
-CROSS 当前设置 `has_diagram: false`、空的 `links` 和 `authors`，因此不会生成虚构的论文链接、作者名单或算法图。取得 PDF 后补齐作者、链接与方法图，并把 `has_diagram` 改为 `true`。首页研究轨迹单独在 `content/site.json` 的 `trajectory` 字段维护。
+CROSS 当前保留空的 `links` 和 `authors`，因此不会生成虚构的论文链接或作者名单；方法图使用用户提供的 `cross.png`。取得 PDF 后再补齐作者与论文链接。首页研究轨迹单独在 `content/site.json` 的 `trajectory` 字段维护。
 
 ### 修改算法图
 
