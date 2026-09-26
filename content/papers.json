@@ -5,9 +5,9 @@
     "title": "CROSS: Verified Peer Corrections for Robust On-Policy Self-Distillation",
     "authors": [],
     "year": 2026,
-    "venue": "ICLR 2027 submission",
+    "venue": "arxiv 2026",
     "links": [],
-    "note": "Manuscript forthcoming.",
+    "note": "",
     "topic": "LLM post-training · On-policy self-distillation",
     "summary": "CROSS extends the distributional perspective to on-policy self-distillation, where the student model generates its own training distribution and that distribution evolves during learning. It focuses on identifying unreliable trajectories and converting reliable, recoverable local corrections into targeted distillation signals.",
     "diagram": "cross.png",
@@ -27,7 +27,7 @@
       "Zhao-Rong Lai"
     ],
     "year": 2026,
-    "venue": "Under review at NeurIPS 2026",
+    "venue": "arxiv 2026",
     "links": [
       {
         "label": "Paper",
@@ -38,10 +38,10 @@
     "topic": "OOD generalization · Within-environment robustness",
     "summary": "Rare or difficult examples can disappear inside an environment's average risk. ECTR learns adversarial sample weights and normalizes them within each environment, then evaluates both prediction loss and the invariance penalty on the same reweighted risks.",
     "diagram": "ectr.png",
-    "diagram_width": 1916,
-    "diagram_height": 821,
-    "caption": "Weights emphasize difficult samples inside each environment. Environment-wise KL regularization controls weight concentration; the same weighted risks feed the supervised objective and TV stationarity penalty. Environments may be observed or inferred.",
-    "diagram_alt": "Each environment contains samples of different difficulty. An adversary reweights samples within each environment, subject to KL regularization. The resulting tail risks feed both prediction loss and the TV stationarity penalty in a minimax objective."
+    "diagram_width": 1920,
+    "diagram_height": 823,
+    "caption": "Per-sample losses and adversarial global weights are conditioned on environments to form shared tail risk. The same tail risk feeds the main objective and TV stationarity; KL concentration control and a learned TV multiplier contribute to the joint minimax objective.",
+    "diagram_alt": "ECTR flowchart: samples feed a predictor and sample adversary. Per-sample loss and global weights are conditioned on known or inferred environments, producing shared tail risk. Main risk, TV stationarity and invariance, KL concentration control, and a TV multiplier combine in a joint minimax objective."
   },
   {
     "id": "shellood",
@@ -53,8 +53,8 @@
       "Eduardo Valle",
       "Bruno Abrahao"
     ],
-    "year": 2026,
-    "venue": "Under review at NeurIPS 2026",
+    "year": 2025,
+    "venue": "arxiv 2025",
     "links": [
       {
         "label": "Earlier paper (BootOOD)",
@@ -111,7 +111,7 @@
       "Yanyan Xu"
     ],
     "year": 2021,
-    "venue": "arXiv preprint · 2021",
+    "venue": "arxiv 2021",
     "links": [
       {
         "label": "Paper",

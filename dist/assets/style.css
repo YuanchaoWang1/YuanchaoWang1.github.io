@@ -429,6 +429,11 @@ main a {
   line-height: 1.21;
 }
 
+.page-publications .venue-arxiv {
+  background: #766b61;
+  border-color: #62584f;
+}
+
 .paper-links {
   display: flex;
   flex-wrap: wrap;

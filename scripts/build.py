@@ -99,13 +99,14 @@ def paper_links(p, project_link=False):
 
 
 def publications():
-    body = '<h1>Publications</h1><p class="publication-intro">Conference papers, manuscripts, and preprints.</p><section class="publication-list" aria-label="Publication list">'
+    body = '<h1>Publications</h1><p class="publication-intro">Conference papers and preprints.</p><section class="publication-list" aria-label="Publication list">'
     for p in sorted(PAPERS, key=lambda paper: paper['year'], reverse=True):
         authors = ', '.join(f'<strong>{E(a)}</strong>' if a == SITE['name'] else E(a) for a in p['authors'])
         body += f'<article class="publication" id="{E(p["id"])}"><h2>{E(p["title"])}</h2>'
         if authors:
             body += f'<p class="authors">{authors}</p>'
-        body += f'<p class="venue">{E(p["venue"])}</p>'
+        venue_class = 'venue venue-arxiv' if p['venue'].lower().startswith('arxiv') else 'venue'
+        body += f'<p class="{venue_class}">{E(p["venue"])}</p>'
         body += paper_links(p, project_link=True)
         if p['note']:
             body += '<p class="paper-note">' + E(p['note']) + '</p>'

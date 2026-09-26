@@ -20,24 +20,24 @@
 | 条目 | 首轮处理 | 依据 |
 | --- | --- | --- |
 | OOD-TV-IRM | ICLR 2025 | 附件首页、[arXiv](https://arxiv.org/abs/2502.19665) |
-| ECTR | Under review at NeurIPS 2026 | 用户本轮明确补充审稿状态；[arXiv](https://arxiv.org/abs/2601.22944) |
-| ShellOOD | Under review at NeurIPS 2026 | 用户本轮明确补充审稿状态；[公开版本](https://arxiv.org/abs/2511.13539)仍题为 BootOOD |
-| Attention & decision trees | arXiv preprint，2021 | 附件 arXiv:2110.03879v1，未显示已确认的正式出版会议或期刊 |
-| CROSS | ICLR 2027 submission；无 PDF 占位 | 用户提供完整题目与研究简介；未提供作者名单与算法细节 |
+| ECTR | arxiv 2026 | 用户指定标签；[arXiv](https://arxiv.org/abs/2601.22944) |
+| ShellOOD | arxiv 2025 | 用户指定标签；[公开版本](https://arxiv.org/abs/2511.13539)仍题为 BootOOD |
+| Attention & decision trees | arxiv 2021 | 附件 arXiv:2110.03879v1，未显示已确认的正式出版会议或期刊 |
+| CROSS | arxiv 2026；暂无公开链接 | 用户指定标签；未提供作者名单或公开论文链接 |
 
 ECTR 原主页的作者顺序与公开 arXiv 元数据不同。根据用户确认，当前顺序为：Yuanchao Wang, Tianqi Zhong, Fengnan Li, Zhao-Rong Lai。ShellOOD 作者沿用公开 BootOOD 的作者名单，最新附件为匿名稿，后续可据非匿名终稿确认。
 
 四个 Paper 链接均指向公开的论文入口。附件供方法理解和重新绘图使用，未将匿名投稿 PDF 放入站点目录。ShellOOD 的链接标签明确为 Earlier paper (BootOOD)，Project overview 链接进入当前项目介绍。
 
-CROSS 全名为 **CROSS: Verified Peer Corrections for Robust On-Policy Self-Distillation**。题目与简介已纳入 Publications 和 Projects；作者名单留空，不展示 PDF 按钮。方法图使用用户提供的 `Cross091002.png`。投稿状态采用用户最后补充的 ICLR 2027 submission 表述，未写成录用或正式发表。
+CROSS 全名为 **CROSS: Verified Peer Corrections for Robust On-Policy Self-Distillation**。题目与简介已纳入 Publications 和 Projects；作者名单留空，不展示 PDF 按钮。方法图使用用户提供的 `Cross091002.png`。Publications 按用户最新要求显示 `arxiv 2026`，目前未提供对应公开链接。
 
 ## 示意图的事实范围
 
-2026-09-11，CROSS、OOD-TV-IRM、ECTR、ShellOOD 和 Attention 的示意图均已替换为用户提供的高分辨率 PNG。
+2026-09-26，CROSS、OOD-TV-IRM、ECTR、ShellOOD 和 Attention 的示意图均使用用户提供的素材；ECTR 图片由 `ECTR_iclr2027.pdf` 的单页以 2 倍分辨率渲染为 PNG。
 
 - **CROSS**：student rollouts、peer cross evidence、verified local correction、recovery 与 CrossSignal；图示将 correction 的位置、内容和置信度连接到 suffix-localized KL distillation。
 - **OOD-TV-IRM**：突出已知环境下的 shared feature extractor、prediction risk、TV penalty 与 primal-dual updates。没有把 TV penalty 画成风险方差，也没有声称对任意未知分布均有保证。
-- **ECTR**：环境内归一化的对抗样本权重同时用于 supervised risk 与 TV stationarity penalty；KL 控制权重集中。图展示训练信号的共用关系，省略更新顺序与潜环境扩展。
+- **ECTR**：PDF 图展示 per-sample loss、global weights、environment conditioning、shared tail risk、TV stationarity、TV multiplier 与 KL concentration control 如何汇入 joint minimax objective。
 - **ShellOOD**：ID-only warm-up、cross-class feature mixup、inner shells、辅助 shell head；推理阶段保留 backbone 与 classifier，使用标准 post-hoc scores。图中的半径为训练几何示意，未把径向阈值当作论文唯一的推理规则。
 - **Attention**：attention discretization、history features、Silas decision trees、high/low prediction 与 influence analysis。观察限定在论文研究的模型内。
 

@@ -116,6 +116,6 @@ git push
 
 ## 本轮内容核对
 
-详细来源、发表状态与需要下轮确认的字段见 [CONTENT_NOTES.md](CONTENT_NOTES.md)。正式发表条目为 **ICLR 2025**；根据本轮用户补充，ECTR 和 ShellOOD 标为 **Under review at NeurIPS 2026**，CROSS 标为 **ICLR 2027 submission**。CROSS 的 2026 年分组表示当前稿件年份。ShellOOD 使用新名称，并明确标出公开链接仍指向早期 BootOOD 版本。
+详细来源、发表状态与需要下轮确认的字段见 [CONTENT_NOTES.md](CONTENT_NOTES.md)。正式发表条目为 **ICLR 2025**；按用户最新指定，CROSS、ECTR、ShellOOD 和 Attention 分别显示 **arxiv 2026**、**arxiv 2026**、**arxiv 2025** 和 **arxiv 2021**。ShellOOD 使用新名称，公开链接仍指向早期 BootOOD 版本。CROSS 暂无公开论文链接。
 
 页面的本地路径、锚点、PNG 文件结构和标注尺寸由 `scripts/check_site.py` 检查。算法图已做内容核对；GitHub Pages 工作流需在目标远程仓库创建并启用 Pages 后首次运行。
