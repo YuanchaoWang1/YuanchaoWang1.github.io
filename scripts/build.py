@@ -2,11 +2,13 @@
 """Generate the static site using Python 3.10+ and the standard library only."""
 from pathlib import Path
 from html import escape
+from hashlib import sha256
 import json
 import os
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / 'dist'
+STYLE_VERSION = sha256((DIST / 'assets/style.css').read_bytes()).hexdigest()[:12]
 SITE = json.loads((ROOT / 'content/site.json').read_text(encoding='utf-8'))
 PAPERS = json.loads((ROOT / 'content/papers.json').read_text(encoding='utf-8'))
 E = escape
@@ -38,7 +40,7 @@ def page(title, body, route=''):
 <meta name="author" content="{E(SITE['name'])}">
 <meta property="og:title" content="{E(full_title)}"><meta property="og:description" content="{E(SITE['description'])}">
 <meta property="og:type" content="website">{meta}
-<link rel="stylesheet" href="{prefix}assets/style.css">
+<link rel="stylesheet" href="{prefix}assets/style.css?v={STYLE_VERSION}">
 </head>
 <body class="{page_class}">
 <a class="skip" href="#main">Skip to content</a>
@@ -80,7 +82,7 @@ def home():
     if SITE.get('trajectory'):
         body += '<h2>Research trajectory</h2><ul class="trajectory">'
         for item in SITE['trajectory']:
-            body += '<li><div class="trajectory-row"><strong>' + link('projects/index.html#'+item['id'],item['label']) + '</strong><span>' + E(item['text']) + '</span></div></li>'
+            body += '<li><div class="trajectory-row"><strong>' + link('projects/index.html#'+item['id'],item['label']) + '</strong> <span>' + E(item['text']) + '</span></div></li>'
         body += '</ul>'
     body += '<p>Read my <a href="publications/index.html">publications</a> or explore the ideas behind my <a href="projects/index.html">projects</a>.</p>'
     body += '<h2>Education</h2>' + records(SITE['education'])
