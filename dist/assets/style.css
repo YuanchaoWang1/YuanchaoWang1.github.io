@@ -564,13 +564,6 @@ main a {
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
 }
 
-.project figcaption {
-  margin-top: 0.65rem;
-  color: var(--muted);
-  font-size: 0.77em;
-  line-height: 1.35;
-}
-
 .muted {
   color: var(--muted);
 }

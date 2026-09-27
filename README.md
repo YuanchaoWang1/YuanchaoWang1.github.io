@@ -87,7 +87,7 @@ git push -u origin main
 | `venue` | 会议简称、预印本类型或稿件状态 |
 | `links` | 已有的论文、会议、代码等链接 |
 | `summary` | 项目简述；Projects 直接使用论文原题作为项目名称 |
-| `caption` / `diagram_alt` | 图注和无障碍替代说明 |
+| `diagram_alt` | 图片的无障碍替代说明 |
 | `diagram` / `diagram_width` / `diagram_height` | 自定义图文件名及其原始像素尺寸 |
 | `has_diagram` | 设为 `false` 时允许仅有文字的项目占位 |
 | `availability` | 待补材料的简短说明 |
@@ -98,9 +98,9 @@ CROSS 当前保留空的 `links` 和 `authors`，因此不会生成虚构的论�
 
 ### 修改算法图
 
-四个项目均使用直接维护的高分辨率 PNG：`ood-tv-irm.png`、`ectr.png`、`shellood.png` 和 `attention-trees.png`。图片按原始宽高比响应式缩放，并在宽屏上获得更大的展示区域；项目页同时提供全尺寸入口。替换时保持稳定文件名，或同步更新 `content/papers.json` 中的 `diagram` 与尺寸字段。
+五个项目均使用直接维护的高分辨率 PNG：`cross.png`、`ood-tv-irm.png`、`ectr.png`、`shellood.png` 和 `attention-trees.png`。图片按原始宽高比响应式缩放，并在宽屏上获得更大的展示区域；点击图片可在页面内查看全尺寸版本。替换时保持稳定文件名，或同步更新 `content/papers.json` 中的 `diagram` 与尺寸字段。
 
-这些图展示算法关系，点的位置、大小和注意力矩阵均为示意，未展示实验测量值。项目页图注说明了省略的细节。
+这些图展示算法关系，点的位置、大小和注意力矩阵均为示意，未展示实验测量值。项目页只显示图片上方的研究简介，图片的无障碍说明由 `diagram_alt` 提供。
 
 ### 提交更新
 

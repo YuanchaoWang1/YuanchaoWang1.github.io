@@ -90,7 +90,7 @@
     {
       "id": "ectr",
       "label": "ECTR",
-      "text": "Sample-level adversarial reweighting for heterogeneity within each environment."
+      "text": "This method improves generalization under mixed distribution shifts by coupling adversarial sample reweighting with cross-environment invariance."
     },
     {
       "id": "shellood",

@@ -134,7 +134,7 @@ def projects():
             width = p.get('diagram_width', 800)
             height = p.get('diagram_height', 480)
             diagram_url = '../assets/diagrams/' + E(diagram, quote=True)
-            body += f'<figure><a class="diagram-image-link" href="{diagram_url}" aria-label="Open full-size diagram for {E(p["title"], quote=True)}"><picture>{source}<img class="diagram" src="{diagram_url}" alt="{E(p["diagram_alt"])}" loading="lazy" width="{width}" height="{height}"></picture></a><figcaption>{E(p["caption"])}</figcaption></figure>'
+            body += f'<figure><a class="diagram-image-link" href="{diagram_url}" aria-label="Open full-size diagram for {E(p["title"], quote=True)}"><picture>{source}<img class="diagram" src="{diagram_url}" alt="{E(p["diagram_alt"])}" loading="lazy" width="{width}" height="{height}"></picture></a></figure>'
         elif p.get('availability'):
             body += f'<p class="paper-note">{E(p["availability"])}</p>'
         body += '</article>'
