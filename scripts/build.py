@@ -80,7 +80,7 @@ def home():
     if SITE.get('trajectory'):
         body += '<h2>Research trajectory</h2><ul class="trajectory">'
         for item in SITE['trajectory']:
-            body += '<li><strong>' + link('projects/index.html#'+item['id'],item['label']) + '.</strong> ' + E(item['text']) + '</li>'
+            body += '<li><div class="trajectory-row"><strong>' + link('projects/index.html#'+item['id'],item['label']) + '</strong><span>' + E(item['text']) + '</span></div></li>'
         body += '</ul>'
     body += '<p>Read my <a href="publications/index.html">publications</a> or explore the ideas behind my <a href="projects/index.html">projects</a>.</p>'
     body += '<h2>Education</h2>' + records(SITE['education'])

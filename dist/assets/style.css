@@ -288,6 +288,13 @@ main a {
   padding-left: 0.15em;
 }
 
+.trajectory-row {
+  display: grid;
+  grid-template-columns: 8.5em minmax(0, 1fr);
+  column-gap: 0.85em;
+  align-items: start;
+}
+
 .trajectory strong {
   font-weight: 700;
 }
