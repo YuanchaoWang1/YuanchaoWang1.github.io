@@ -8,7 +8,7 @@
     "venue": "arxiv 2026",
     "links": [],
     "note": "",
-    "topic": "LLM post-training · On-policy self-distillation",
+    "topic": "LLM post-training · On Policy Distillation",
     "summary": "CROSS extends the distributional perspective to on-policy self-distillation, where the student model generates its own training distribution and that distribution evolves during learning. It focuses on identifying unreliable trajectories and converting reliable, recoverable local corrections into targeted distillation signals.",
     "diagram": "cross.png",
     "diagram_width": 1672,
@@ -34,7 +34,7 @@
       }
     ],
     "note": "",
-    "topic": "OOD generalization · Within-environment robustness",
+    "topic": "OOD generalization · Invariant learning",
     "summary": "ECTR addresses mixed distribution shifts in which spurious correlations change across environments while hard examples within each environment receive too little emphasis. ECTR couples sample-weight learning with total-variation-based invariance, using the same environment-conditioned weighted risk for prediction and stationarity testing, with KL regularization controlling weight concentration. Theoretical analysis, controlled ablations, and synthetic and real-world benchmarks support the shared-risk design and characterize its behavior under training corruption and varying environment information.",
     "diagram": "ectr.png",
     "diagram_width": 1920,
