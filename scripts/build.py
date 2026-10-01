@@ -135,7 +135,8 @@ def projects():
             source = f'<source media="(max-width: 960px)" srcset="../assets/diagrams/{E(mobile_diagram, quote=True)}">' if mobile_diagram else ''
             width = p.get('diagram_width', 800)
             height = p.get('diagram_height', 480)
-            diagram_url = '../assets/diagrams/' + E(diagram, quote=True)
+            diagram_version = sha256((DIST / 'assets/diagrams' / diagram).read_bytes()).hexdigest()[:12]
+            diagram_url = '../assets/diagrams/' + E(diagram, quote=True) + '?v=' + diagram_version
             body += f'<figure><a class="diagram-image-link" href="{diagram_url}" aria-label="Open full-size diagram for {E(p["title"], quote=True)}"><picture>{source}<img class="diagram" src="{diagram_url}" alt="{E(p["diagram_alt"])}" loading="lazy" width="{width}" height="{height}"></picture></a></figure>'
         elif p.get('availability'):
             body += f'<p class="paper-note">{E(p["availability"])}</p>'

@@ -47,9 +47,7 @@
     "title": "ShellOOD: Self-Supervised OOD Detection with Radius Shells Guided by Neural Collapse",
     "authors": [
       "Yuanchao Wang",
-      "Tian Qin",
-      "Eduardo Valle",
-      "Bruno Abrahao"
+      "Tian Qin"
     ],
     "year": 2025,
     "venue": "arxiv 2025",
@@ -63,9 +61,9 @@
     "topic": "OOD detection · Representation geometry",
     "summary": "ShellOOD learns OOD-aware representations using only in-distribution training data. After classifier warm-up, it mixes features from different classes and uses an auxiliary shell head to organize these synthetic features into inner radius shells around the global feature center.",
     "diagram": "shellood.png",
-    "diagram_width": 1672,
-    "diagram_height": 941,
-    "diagram_alt": "Different ID class features lie around an outer reference radius. Cross-class mixup produces synthetic features trained toward inner shells. The ID classifier is retained at inference; the auxiliary shell head is discarded and standard post-hoc OOD scoring is used."
+    "diagram_width": 2508,
+    "diagram_height": 1412,
+    "diagram_alt": "ID data feeds a backbone with a classification head and a training-only self-supervision head. Neural-collapse feature geometry places ID classes around an outer reference radius and pseudo-OOD features in inner radius shells. The inference path remains unchanged."
   },
   {
     "id": "ood-tv-irm",
