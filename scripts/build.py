@@ -107,7 +107,8 @@ def publications():
         body += f'<article class="publication" id="{E(p["id"])}"><h2>{E(p["title"])}</h2>'
         if authors:
             body += f'<p class="authors">{authors}</p>'
-        venue_class = 'venue venue-arxiv' if p['venue'].lower().startswith('arxiv') else 'venue'
+        venue_style = p.get('venue_style', 'arxiv' if p['venue'].lower().startswith('arxiv') else '')
+        venue_class = 'venue venue-arxiv' if venue_style == 'arxiv' else 'venue'
         body += f'<p class="{venue_class}">{E(p["venue"])}</p>'
         body += paper_links(p, project_link=True)
         if p['note']:
