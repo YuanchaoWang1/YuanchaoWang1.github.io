@@ -100,7 +100,7 @@
     {
       "id": "cross",
       "label": "CROSS",
-      "text": "CROSS is a self-distillation framework that discovers, verifies, and localizes useful corrections from a model’s own reasoning trajectories, then selectively distills those corrections back into the student, focusing on recoverable error regions."
+      "text": "Distilling verified, recoverable local corrections from a model’s own reasoning trajectories."
     }
   ]
 }
