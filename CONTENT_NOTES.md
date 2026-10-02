@@ -39,6 +39,8 @@ ShellOOD 图片随后更新为 `ShellOOD_cvpr2027.pdf` 的单页渲染（2508 ×
 
 同日再次读取最新版 `OODTVIRM_2026.pdf` 更新 OOD-TV-IRM 图片；CROSS 图片由 `CROSS_2027.pdf` 单页渲染为 2508 × 1412 PNG。
 
+Attention 项目图片更新为 `attention_2026.pdf` 单页渲染（2016 × 1008），保持原比例；Home 与 Projects 的 CROSS 介绍按用户提供的新文案更新，突出纠正信息的发现、验证、定位以及可恢复错误区域的局部自蒸馏。
+
 - **CROSS**：student rollouts、peer cross evidence、verified correction、recovery 与 privileged information；图示通过 self-teacher 将纠正后的 suffix 连接到 localized KL distillation，prefix 不参与蒸馏。
 - **OOD-TV-IRM**：突出已知环境下的 shared feature extractor、prediction risk、TV penalty 与 primal-dual updates。没有把 TV penalty 画成风险方差，也没有声称对任意未知分布均有保证。
 - **ECTR**：PDF 图展示 per-sample loss、global weights、environment conditioning、shared tail risk、TV stationarity、TV multiplier 与 KL concentration control 如何汇入 joint minimax objective。

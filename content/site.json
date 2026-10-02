@@ -100,7 +100,7 @@
     {
       "id": "cross",
       "label": "CROSS",
-      "text": "Verified, recoverable local corrections for robust on-policy self-distillation under an evolving student-generated distribution."
+      "text": "CROSS is a self-distillation framework that discovers, verifies, and localizes useful corrections from a model’s own reasoning trajectories, then selectively distills those corrections back into the student, focusing on recoverable error regions."
     }
   ]
 }

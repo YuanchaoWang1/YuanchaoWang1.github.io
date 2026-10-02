@@ -14,7 +14,7 @@
     "links": [],
     "note": "",
     "topic": "LLM post-training · On Policy Distillation",
-    "summary": "CROSS extends the distributional perspective to on-policy self-distillation, where the student model generates its own training distribution and that distribution evolves during learning. It focuses on identifying unreliable trajectories and converting reliable, recoverable local corrections into targeted distillation signals.",
+    "summary": "CROSS turns a model’s own diverse reasoning trajectories into structured corrective supervision by identifying erroneous trajectories and extracting evidence-supported local corrections. It verifies and precisely localizes each correction, then evaluates whether the current student can actually recover from the identified error when given that corrective information. These verified and recoverable signals are compiled into localized token-level self-distillation objectives, concentrating learning on informative reasoning errors instead of indiscriminately distilling entire trajectories.",
     "diagram": "cross.png",
     "diagram_width": 2508,
     "diagram_height": 1412,
@@ -121,8 +121,8 @@
     "topic": "Interpretability · Speech recognition",
     "summary": "This study probes attention dynamics in an encoder-decoder speech recognizer trained on TIMIT. It discretizes attention weights into ten levels and trains decision trees to predict high or low attention from preceding attention states, then inspects the learned decision conditions.",
     "diagram": "attention-trees.png",
-    "diagram_width": 1774,
-    "diagram_height": 887,
+    "diagram_width": 2016,
+    "diagram_height": 1008,
     "diagram_alt": "A TIMIT speech recognizer produces attention matrices. Attention weights are discretized into ten levels. Previous attention states become features for a decision-tree classifier of high versus low attention. Decision conditions reveal the influence of preceding states."
   }
 ]
