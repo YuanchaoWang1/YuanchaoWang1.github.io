@@ -94,7 +94,7 @@ git push -u origin main
 
 新加项目时，在 `dist/assets/diagrams/` 中加入图片并在论文条目中填写图文件名与尺寸，同时在 `scripts/build.py` 的 `projects()` 中更新 `order` 列表。首页不重复整份论文目录，所有论文集中在 Publications。
 
-CROSS 当前保留空的 `links` 和 `authors`，因此不会生成虚构的论文链接或作者名单；方法图使用用户提供的 `cross.png`。取得 PDF 后再补齐作者与论文链接。首页研究轨迹单独在 `content/site.json` 的 `trajectory` 字段维护。
+CROSS 作者顺序为 Yuanchao Wang, Jinnuo Liu, Yifan Li, Hongyi Wen；当前 `links` 留空，待提供公开论文地址后补齐。方法图使用用户提供的 `cross.png`。首页研究轨迹单独在 `content/site.json` 的 `trajectory` 字段维护。
 
 ### 修改算法图
 

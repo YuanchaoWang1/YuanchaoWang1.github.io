@@ -3,7 +3,12 @@
     "id": "cross",
     "category": "LLM post-training",
     "title": "CROSS: Verified Peer Corrections for Robust On-Policy Self-Distillation",
-    "authors": [],
+    "authors": [
+      "Yuanchao Wang",
+      "Jinnuo Liu",
+      "Yifan Li",
+      "Hongyi Wen"
+    ],
     "year": 2026,
     "venue": "arxiv 2026",
     "links": [],
@@ -90,8 +95,8 @@
     "topic": "OOD generalization · Invariant learning",
     "summary": "OOD-TV-IRM interprets the autonomous total-variation penalty as a Lagrange multiplier. A primal-dual learning scheme jointly updates the feature extractor and the penalty model, balancing prediction risk with pressure toward invariance across environments.",
     "diagram": "ood-tv-irm.png",
-    "diagram_width": 1916,
-    "diagram_height": 821,
+    "diagram_width": 1920,
+    "diagram_height": 1080,
     "diagram_alt": "Multiple training environments feed a shared feature extractor. Its risks and TV stationarity penalty form a joint objective. A primal descent step updates the feature extractor and a dual ascent step updates the learned penalty multiplier."
   },
   {
