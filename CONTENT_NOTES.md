@@ -29,7 +29,7 @@ ECTR 原主页的作者顺序与公开 arXiv 元数据不同。根据用户确�
 
 四个 Paper 链接均指向公开的论文入口。附件供方法理解和重新绘图使用，未将匿名投稿 PDF 放入站点目录。ShellOOD 的链接标签明确为 Earlier paper (BootOOD)，Project overview 链接进入当前项目介绍。
 
-CROSS 全名为 **CROSS: Verified Peer Corrections for Robust On-Policy Self-Distillation**。题目与简介已纳入 Publications 和 Projects；作者按 2026-10-02 用户指定顺序展示：Yuanchao Wang, Jinnuo Liu, Yifan Li, Hongyi Wen。方法图使用用户提供的 `Cross091002.png`。Publications 按用户最新要求显示 `arxiv 2026`，目前未提供对应公开链接。
+CROSS 全名为 **CROSS: Verified Peer Corrections for Robust On-Policy Self-Distillation**。题目与简介已纳入 Publications 和 Projects；作者按 2026-10-02 用户指定顺序展示：Yuanchao Wang, Jinnuo Liu, Yifan Li, Hongyi Wen。方法图已更新为用户提供的 `CROSS_2027.pdf`。Publications 按用户最新要求显示 `arxiv 2026`，目前未提供对应公开链接。
 
 ## 示意图的事实范围
 
@@ -37,7 +37,9 @@ CROSS 全名为 **CROSS: Verified Peer Corrections for Robust On-Policy Self-Dis
 
 ShellOOD 图片随后更新为 `ShellOOD_cvpr2027.pdf` 的单页渲染（2508 × 1412）；2026-10-02，OOD-TV-IRM 图片更新为 `OODTVIRM_2026.pdf` 的单页渲染（1920 × 1080）。均保持原比例，图片地址带内容版本标识以避免旧缓存。
 
-- **CROSS**：student rollouts、peer cross evidence、verified local correction、recovery 与 CrossSignal；图示将 correction 的位置、内容和置信度连接到 suffix-localized KL distillation。
+同日再次读取最新版 `OODTVIRM_2026.pdf` 更新 OOD-TV-IRM 图片；CROSS 图片由 `CROSS_2027.pdf` 单页渲染为 2508 × 1412 PNG。
+
+- **CROSS**：student rollouts、peer cross evidence、verified correction、recovery 与 privileged information；图示通过 self-teacher 将纠正后的 suffix 连接到 localized KL distillation，prefix 不参与蒸馏。
 - **OOD-TV-IRM**：突出已知环境下的 shared feature extractor、prediction risk、TV penalty 与 primal-dual updates。没有把 TV penalty 画成风险方差，也没有声称对任意未知分布均有保证。
 - **ECTR**：PDF 图展示 per-sample loss、global weights、environment conditioning、shared tail risk、TV stationarity、TV multiplier 与 KL concentration control 如何汇入 joint minimax objective。
 - **ShellOOD**：ID-only warm-up、cross-class feature mixup、inner shells、辅助 shell head；推理阶段保留 backbone 与 classifier，使用标准 post-hoc scores。图中的半径为训练几何示意，未把径向阈值当作论文唯一的推理规则。

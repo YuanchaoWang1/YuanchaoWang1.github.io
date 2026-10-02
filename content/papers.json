@@ -16,9 +16,9 @@
     "topic": "LLM post-training · On Policy Distillation",
     "summary": "CROSS extends the distributional perspective to on-policy self-distillation, where the student model generates its own training distribution and that distribution evolves during learning. It focuses on identifying unreliable trajectories and converting reliable, recoverable local corrections into targeted distillation signals.",
     "diagram": "cross.png",
-    "diagram_width": 1672,
-    "diagram_height": 941,
-    "diagram_alt": "A problem produces student rollout candidates. Peer rollouts provide cross evidence for a verified local correction. Successful recovery becomes a CrossSignal containing location, correction, and confidence; self-teacher and student outputs then use localized KL on the corrected suffix while leaving the prefix undistilled."
+    "diagram_width": 2508,
+    "diagram_height": 1412,
+    "diagram_alt": "Student rollouts contain a target local error. Peer rollouts provide cross evidence for a verified correction, which is tested for successful recovery. Privileged information guides the self-teacher, and localized KL distills the corrected suffix to the student while leaving the prefix undistilled."
   },
   {
     "id": "ectr",
