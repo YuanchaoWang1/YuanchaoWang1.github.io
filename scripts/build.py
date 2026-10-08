@@ -89,7 +89,9 @@ def home():
     body += '<h2>Experience</h2>' + records(SITE['experience'])
     body += '<h2>Recognition</h2><ul class="compact-list">'
     body += ''.join(f'<li>{link(x["url"], x["title"])}<br><span class="muted">{E(x["detail"])}</span></li>' for x in SITE['recognition'])
-    body += '</ul><h2>Professional service</h2><p>' + E(SITE['service']) + '</p>'
+    body += '</ul><h2>Professional service</h2><p class="service-reviewing">' + E(SITE['service']) + '</p>'
+    for award in SITE.get('service_awards', []):
+        body += '<p class="service-award"><strong>' + E(award) + '</strong></p>'
     page('Home', body)
 
 

@@ -80,7 +80,11 @@
       "url": "https://www.kaggle.com/competitions/linking-writing-processes-to-writing-quality"
     }
   ],
-  "service": "Reviewer for ICML (Silver Reviewer Award), ICLR, NeurIPS, and AAAI.",
+  "service": "Reviewer for ICML, ICLR, NeurIPS, and AAAI.",
+  "service_awards": [
+    "ICML 2026 Silver Reviewer",
+    "NeurIPS 2026 Top Reviewer"
+  ],
   "trajectory": [
     {
       "id": "ood-tv-irm",
