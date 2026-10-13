@@ -2,7 +2,7 @@
   {
     "id": "cross",
     "category": "LLM post-training",
-    "title": "CROSS: Verified Peer Corrections for Robust On-Policy Self-Distillation",
+    "title": "CROSS: Recoverability-Aware Self-Distillation via Cross-Rollout Supervision Selection",
     "authors": [
       "Yuanchao Wang",
       "Jinnuo Liu",
@@ -10,8 +10,14 @@
       "Hongyi Wen"
     ],
     "year": 2026,
-    "venue": "arxiv 2026",
-    "links": [],
+    "venue": "Under review at ARR",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "../papers/cross/index.html"
+      }
+    ],
+    "pdf": "cross-arr-october.pdf",
     "note": "",
     "topic": "LLM post-training · On Policy Distillation",
     "summary": "CROSS turns a model’s own diverse reasoning trajectories into structured corrective supervision by identifying erroneous trajectories and extracting evidence-supported local corrections. It verifies and precisely localizes each correction, then evaluates whether the current student can actually recover from the identified error when given that corrective information. These verified and recoverable signals are compiled into localized token-level self-distillation objectives, concentrating learning on informative reasoning errors instead of indiscriminately distilling entire trajectories.",

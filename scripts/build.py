@@ -19,12 +19,12 @@ def link(url, label):
 
 
 def page(title, body, route=''):
-    prefix = '../' if route else ''
-    page_class = 'page-' + (route or 'home')
+    prefix = '../' * len(Path(route).parts) if route else ''
+    page_class = 'page-' + (route.replace('/', '-') if route else 'home')
     nav = []
     for name, target in [('Home', ''), ('Publications', 'publications'), ('Projects', 'projects')]:
         href = prefix + (target + '/' if target else '') + 'index.html'
-        active = ' aria-current="page"' if target == route else ''
+        active = ' aria-current="page"' if target == route or (target == 'publications' and route.startswith('papers/')) else ''
         nav.append(f'<a href="{href}"{active}>{name}</a>')
     socials = link('mailto:' + SITE['email'], 'Email') + ''.join(link(x['url'], x['label']) for x in SITE['links'])
     canonical_base = os.environ.get('SITE_URL', SITE['site_url']).rstrip('/')
@@ -148,6 +148,23 @@ def projects():
     page('Projects', body, 'projects')
 
 
+def cross_paper():
+    paper = next(p for p in PAPERS if p['id'] == 'cross')
+    pdf_url = '../../assets/papers/' + E(paper['pdf'], quote=True)
+    authors = ', '.join(E(author) for author in paper['authors'])
+    body = '<p class="eyebrow">Research paper</p><h1>' + E(paper['title']) + '</h1>'
+    body += '<p class="paper-page-authors">' + authors + '</p>'
+    body += '<p class="paper-page-status">' + E(paper['venue']) + '</p>'
+    body += '<p class="paper-page-summary">' + E(paper['summary']) + '</p>'
+    body += '<div class="paper-links paper-page-links">'
+    body += '<a href="' + pdf_url + '" target="_blank" rel="noopener">Open PDF</a>'
+    body += '<a href="../../projects/index.html#cross">Project overview</a>'
+    body += '</div>'
+    body += '<a class="paper-preview-link" href="' + pdf_url + '" target="_blank" rel="noopener" aria-label="Open the full CROSS paper PDF in a new tab">'
+    body += '<img class="paper-preview" src="../../assets/papers/cross-cover.png" alt="First page of the CROSS ARR manuscript, showing the title and abstract" loading="lazy" width="1191" height="1684"></a>'
+    page(paper['title'], body, 'papers/cross')
+
+
 def redirects():
     # Preserve the old research route as a compatibility alias.
     (DIST / 'research').mkdir(exist_ok=True)
@@ -159,5 +176,6 @@ if __name__ == '__main__':
     home()
     publications()
     projects()
+    cross_paper()
     redirects()
-    print('Generated Home, Publications, Projects, and the /research/ redirect.')
+    print('Generated Home, Publications, Projects, the CROSS paper page, and the /research/ redirect.')
