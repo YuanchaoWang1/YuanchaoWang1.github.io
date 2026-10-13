@@ -95,7 +95,7 @@ git push -u origin main
 
 新加项目时，在 `dist/assets/diagrams/` 中加入图片并在论文条目中填写图文件名与尺寸，同时在 `scripts/build.py` 的 `projects()` 中更新 `order` 列表。首页不重复整份论文目录，所有论文集中在 Publications。
 
-CROSS 作者顺序为 Yuanchao Wang, Jinnuo Liu, Yifan Li, Hongyi Wen；Paper 链接指向站内 `/papers/cross/` 页面，页面提供匿名 ARR 投稿 PDF 的首页预览和全文打开入口，文件位于 `dist/assets/papers/`。方法图使用用户提供的 `cross.png`。首页研究轨迹单独在 `content/site.json` 的 `trajectory` 字段维护。
+CROSS 作者顺序为 Yuanchao Wang, Jinnuo Liu, Yifan Li, Hongyi Wen；Publications 和 Projects 的 Paper 链接直接打开 `dist/assets/papers/cross-arr-october.pdf`。站内 `/papers/cross/` 页面保留首页预览。方法图使用用户提供的 `cross.png`。首页研究轨迹单独在 `content/site.json` 的 `trajectory` 字段维护。
 
 ### 修改算法图
 
@@ -117,6 +117,6 @@ git push
 
 ## 本轮内容核对
 
-详细来源、发表状态与需要下轮确认的字段见 [CONTENT_NOTES.md](CONTENT_NOTES.md)。正式发表条目为 **ICLR 2025**；CROSS 显示 **Under review at ARR** 并提供站内论文页，ECTR 显示 **Under review ICLR2027**，ShellOOD 和 Attention 分别显示 **arxiv 2025** 和 **arxiv 2021**。ShellOOD 使用新名称，公开链接仍指向早期 BootOOD 版本。
+详细来源、发表状态与需要下轮确认的字段见 [CONTENT_NOTES.md](CONTENT_NOTES.md)。正式发表条目为 **ICLR 2025**；CROSS 显示 **Under review at ARR** 并直链站内 PDF，ECTR 显示 **Under review at ICLR 2027**，ShellOOD 和 Attention 分别显示 **arxiv 2025** 和 **arxiv 2021**。ShellOOD 使用新名称，公开链接仍指向早期 BootOOD 版本。
 
 页面的本地路径、锚点、PNG 文件结构和标注尺寸由 `scripts/check_site.py` 检查。算法图已做内容核对；GitHub Pages 工作流需在目标远程仓库创建并启用 Pages 后首次运行。

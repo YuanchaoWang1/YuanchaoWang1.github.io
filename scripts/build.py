@@ -151,9 +151,7 @@ def projects():
 def cross_paper():
     paper = next(p for p in PAPERS if p['id'] == 'cross')
     pdf_url = '../../assets/papers/' + E(paper['pdf'], quote=True)
-    authors = ', '.join(E(author) for author in paper['authors'])
     body = '<p class="eyebrow">Research paper</p><h1>' + E(paper['title']) + '</h1>'
-    body += '<p class="paper-page-authors">' + authors + '</p>'
     body += '<p class="paper-page-status">' + E(paper['venue']) + '</p>'
     body += '<p class="paper-page-summary">' + E(paper['summary']) + '</p>'
     body += '<div class="paper-links paper-page-links">'

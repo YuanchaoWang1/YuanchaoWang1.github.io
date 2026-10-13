@@ -20,14 +20,14 @@
 | 条目 | 首轮处理 | 依据 |
 | --- | --- | --- |
 | OOD-TV-IRM | ICLR 2025 | 附件首页、[arXiv](https://arxiv.org/abs/2502.19665) |
-| ECTR | Under review ICLR2027 | 用户指定标签；[arXiv](https://arxiv.org/abs/2601.22944) |
+| ECTR | Under review at ICLR 2027 | 用户指定标签；[arXiv](https://arxiv.org/abs/2601.22944) |
 | ShellOOD | arxiv 2025 | 用户指定标签；[公开版本](https://arxiv.org/abs/2511.13539)仍题为 BootOOD |
 | Attention & decision trees | arxiv 2021 | 附件 arXiv:2110.03879v1，未显示已确认的正式出版会议或期刊 |
 | CROSS | Under review at ARR；站内论文页 | 用户提供的 `Cross_ARR_October.pdf`，首页注明匿名 ACL 投稿 |
 
 ECTR 原主页的作者顺序与公开 arXiv 元数据不同。根据用户确认，当前顺序为：Yuanchao Wang, Tianqi Zhong, Fengnan Li, Zhao-Rong Lai。ShellOOD 作者按用户要求仅保留 Yuanchao Wang, Tian Qin。
 
-其他四个 Paper 链接指向公开的论文入口；CROSS 的 Paper 链接指向站内 `/papers/cross/`，提供匿名 ARR 投稿 PDF 的首页预览与全文打开入口。ShellOOD 的链接标签明确为 Earlier paper (BootOOD)，Project overview 链接进入当前项目介绍。
+其他四个 Paper 链接指向公开的论文入口；CROSS 的 Paper 链接直接指向站内 PDF，`/papers/cross/` 页面保留首页预览。ShellOOD 的链接标签明确为 Earlier paper (BootOOD)，Project overview 链接进入当前项目介绍。
 
 CROSS 投稿稿件题目为 **CROSS: Recoverability-Aware Self-Distillation via Cross-Rollout Supervision Selection**。Publications 和 Projects 使用该题目；作者按 2026-10-02 用户指定顺序展示：Yuanchao Wang, Jinnuo Liu, Yifan Li, Hongyi Wen。方法图使用用户提供的 `CROSS_2027.pdf` 渲染版。`Cross_ARR_October.pdf` 全文置于站内，论文页提供阅读和打开入口，状态显示 Under review at ARR。
 

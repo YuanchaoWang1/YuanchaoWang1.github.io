@@ -11,10 +11,11 @@
     ],
     "year": 2026,
     "venue": "Under review at ARR",
+    "venue_style": "arxiv",
     "links": [
       {
         "label": "Paper",
-        "url": "../papers/cross/index.html"
+        "url": "https://yuanchaowang1.github.io/assets/papers/cross-arr-october.pdf"
       }
     ],
     "pdf": "cross-arr-october.pdf",
@@ -37,7 +38,7 @@
       "Zhao-Rong Lai"
     ],
     "year": 2026,
-    "venue": "Under review ICLR2027",
+    "venue": "Under review at ICLR 2027",
     "venue_style": "arxiv",
     "links": [
       {
