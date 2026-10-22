@@ -279,7 +279,7 @@ main a {
 }
 
 .trajectory {
-  --trajectory-fill: #f5f5f5;
+  --trajectory-fill: #ffffff;
   --trajectory-axis: 0.7em;
   --trajectory-indent: 2.5em;
   position: relative;
@@ -294,10 +294,10 @@ main a {
   left: calc(var(--trajectory-axis) - var(--trajectory-indent));
   top: calc(0.7275em + 0.4em - 2px);
   width: 28px;
-  height: 28px;
-  overflow: visible;
+  height: calc(100% - 0.4em + 2px);
+  overflow: hidden;
   fill: var(--trajectory-fill);
-  stroke: var(--ink);
+  stroke: #000000;
   stroke-width: 1.5;
   stroke-linejoin: round;
   stroke-linecap: round;
@@ -323,28 +323,23 @@ main a {
   top: 0.7275em;
   width: 0.8em;
   height: 0.8em;
-  border: 2px solid var(--ink);
+  border: 2px solid #000000;
   border-radius: 50%;
-  background: var(--ink);
+  background: #ffffff;
   transform: translate(-50%, -50%);
 }
 
-.trajectory li:not(:last-child)::after {
+.trajectory li:not(:first-child):not(:last-child)::after {
   content: "";
   position: absolute;
   left: calc(var(--trajectory-axis) - var(--trajectory-indent));
   top: 0.7275em;
   width: 10px;
   height: 100%;
-  border-left: 1.5px solid var(--ink);
-  border-right: 1.5px solid var(--ink);
+  border-left: 1.5px solid #000000;
+  border-right: 1.5px solid #000000;
   background: var(--trajectory-fill);
   transform: translateX(-50%);
-}
-
-.trajectory li:first-child::after {
-  top: calc(0.7275em + 0.4em + 16px);
-  height: calc(100% - 0.4em - 16px);
 }
 
 .trajectory-row {
