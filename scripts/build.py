@@ -84,7 +84,7 @@ def home():
         for index, item in enumerate(reversed(SITE['trajectory'])):
             body += '<li>'
             if index == 0:
-                body += '<svg class="trajectory-arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M9.75 28 V18 H3 Q1 18 2.5 16 L12.5 3 Q14 1 15.5 3 L25.5 16 Q27 18 25 18 H18.25 V28"/></svg>'
+                body += '<svg class="trajectory-arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M9.75 28 V18 Q9.75 16.5 8.25 16.5 H5.5 Q4 16.5 5 15 L12.5 3 Q14 1 15.5 3 L23 15 Q24 16.5 22.5 16.5 H19.75 Q18.25 16.5 18.25 18 V28"/></svg>'
             body += '<div class="trajectory-row"><strong>' + link('projects/index.html#'+item['id'],item['label']) + '</strong> <span>' + E(item['text']) + '</span></div></li>'
         body += '</ul>'
     body += '<p>Read my <a href="publications/index.html">publications</a> or explore the ideas behind my <a href="projects/index.html">projects</a>.</p>'

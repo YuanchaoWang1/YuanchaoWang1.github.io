@@ -292,7 +292,7 @@ main a {
   position: absolute;
   z-index: 1;
   left: calc(var(--trajectory-axis) - var(--trajectory-indent));
-  top: calc(0.7275em + 0.55em);
+  top: calc(0.7275em + 0.4em - 2px);
   width: 28px;
   height: 28px;
   overflow: visible;
@@ -325,7 +325,7 @@ main a {
   height: 0.8em;
   border: 2px solid var(--ink);
   border-radius: 50%;
-  background: var(--trajectory-fill);
+  background: var(--ink);
   transform: translate(-50%, -50%);
 }
 
@@ -340,6 +340,11 @@ main a {
   border-right: 1.5px solid var(--ink);
   background: var(--trajectory-fill);
   transform: translateX(-50%);
+}
+
+.trajectory li:first-child::after {
+  top: calc(0.7275em + 0.4em + 16px);
+  height: calc(100% - 0.4em - 16px);
 }
 
 .trajectory-row {
