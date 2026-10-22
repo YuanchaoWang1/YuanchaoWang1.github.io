@@ -89,22 +89,22 @@
     {
       "id": "ood-tv-irm",
       "label": "OOD-TV-IRM",
-      "text": "Robust correction under environment-level distribution shift."
+      "text": "Environment-level Robustness"
     },
     {
       "id": "ectr",
       "label": "ECTR",
-      "text": "This method improves generalization under mixed distribution shifts by coupling adversarial sample reweighting with cross-environment invariance."
+      "text": "Tail-aware Robustness"
     },
     {
       "id": "shellood",
       "label": "ShellOOD",
-      "text": "A geometric, self-supervised approach to detecting samples outside the reliable support of the training distribution."
+      "text": "Sample-level Reliability"
     },
     {
       "id": "cross",
       "label": "CROSS",
-      "text": "Distilling verified, recoverable local corrections from a model’s own reasoning trajectories."
+      "text": "Recoverability-aware LLM Distillation"
     }
   ]
 }
