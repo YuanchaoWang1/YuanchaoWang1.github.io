@@ -81,8 +81,11 @@ def home():
         body += f'<p class="bio">{E(paragraph)}</p>'
     if SITE.get('trajectory'):
         body += '<h2>Research trajectory</h2><ul class="trajectory">'
-        for item in reversed(SITE['trajectory']):
-            body += '<li><div class="trajectory-row"><strong>' + link('projects/index.html#'+item['id'],item['label']) + '</strong> <span>' + E(item['text']) + '</span></div></li>'
+        for index, item in enumerate(reversed(SITE['trajectory'])):
+            body += '<li>'
+            if index == 0:
+                body += '<svg class="trajectory-arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M9.75 28 V18 H3 Q1 18 2.5 16 L12.5 3 Q14 1 15.5 3 L25.5 16 Q27 18 25 18 H18.25 V28"/></svg>'
+            body += '<div class="trajectory-row"><strong>' + link('projects/index.html#'+item['id'],item['label']) + '</strong> <span>' + E(item['text']) + '</span></div></li>'
         body += '</ul>'
     body += '<p>Read my <a href="publications/index.html">publications</a> or explore the ideas behind my <a href="projects/index.html">projects</a>.</p>'
     body += '<h2>Education</h2>' + records(SITE['education'])
