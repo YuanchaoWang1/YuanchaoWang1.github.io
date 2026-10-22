@@ -279,7 +279,11 @@ main a {
 }
 
 .trajectory {
-  --trajectory-fill: #ffffff;
+  --trajectory-line-fill: #e8e8e8;
+  --trajectory-line-stroke: #000000;
+  --trajectory-line-width: 1.5px;
+  --trajectory-node-fill: #ffffff;
+  --trajectory-node-stroke: #000000;
   --trajectory-axis: 0.7em;
   --trajectory-indent: 2.5em;
   position: relative;
@@ -288,21 +292,30 @@ main a {
   list-style: none;
 }
 
-.trajectory-arrow {
+.trajectory-arrow,
+.trajectory-shaft {
   position: absolute;
   z-index: 1;
   left: calc(var(--trajectory-axis) - var(--trajectory-indent));
-  top: calc(0.7275em + 0.4em - 2px);
   width: 28px;
-  height: calc(100% - 0.4em + 2px);
   overflow: hidden;
-  fill: var(--trajectory-fill);
-  stroke: #000000;
-  stroke-width: 1.5;
+  fill: var(--trajectory-line-fill);
+  stroke: var(--trajectory-line-stroke);
+  stroke-width: var(--trajectory-line-width);
   stroke-linejoin: round;
   stroke-linecap: round;
   transform: translateX(-50%);
   pointer-events: none;
+}
+
+.trajectory-arrow {
+  top: calc(0.7275em + 0.4em - 2px);
+  height: calc(100% - 0.4em + 2px);
+}
+
+.trajectory-shaft {
+  top: 0.7275em;
+  height: 100%;
 }
 
 .trajectory li {
@@ -323,23 +336,10 @@ main a {
   top: 0.7275em;
   width: 0.8em;
   height: 0.8em;
-  border: 2px solid #000000;
+  border: 2px solid var(--trajectory-node-stroke);
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--trajectory-node-fill);
   transform: translate(-50%, -50%);
-}
-
-.trajectory li:not(:first-child):not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: calc(var(--trajectory-axis) - var(--trajectory-indent));
-  top: 0.7275em;
-  width: 10px;
-  height: 100%;
-  border-left: 1.5px solid #000000;
-  border-right: 1.5px solid #000000;
-  background: var(--trajectory-fill);
-  transform: translateX(-50%);
 }
 
 .trajectory-row {

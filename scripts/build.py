@@ -86,6 +86,8 @@ def home():
             if index == 0:
                 # Clip a continuous shaft at the next node; do not scale the arrowhead.
                 body += '<svg class="trajectory-arrow" aria-hidden="true" focusable="false"><path d="M9.75 1024 V18 Q9.75 16.5 8.25 16.5 H5.5 Q4 16.5 5 15 L12.5 3 Q14 1 15.5 3 L23 15 Q24 16.5 22.5 16.5 H19.75 Q18.25 16.5 18.25 18 V1024"/></svg>'
+            elif index < len(SITE['trajectory']) - 1:
+                body += '<svg class="trajectory-shaft" aria-hidden="true" focusable="false"><path d="M9.75 0 V1024 H18.25 V0"/></svg>'
             body += '<div class="trajectory-row"><strong>' + link('projects/index.html#'+item['id'],item['label']) + '</strong> <span>' + E(item['text']) + '</span></div></li>'
         body += '</ul>'
     body += '<p>Read my <a href="publications/index.html">publications</a> or explore the ideas behind my <a href="projects/index.html">projects</a>.</p>'
