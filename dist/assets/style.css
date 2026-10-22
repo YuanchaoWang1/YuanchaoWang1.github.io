@@ -279,13 +279,65 @@ main a {
 }
 
 .trajectory {
+  position: relative;
   margin: 0 0 1.3em;
-  padding-left: 1.2em;
+  padding: 1.1em 0 0 2em;
+  list-style: none;
+}
+
+.trajectory::before {
+  content: "";
+  position: absolute;
+  left: 0.45em;
+  top: 0;
+  width: 2px;
+  height: 1.83em;
+  background: var(--ink);
+  transform: translateX(-50%);
+}
+
+.trajectory::after {
+  content: "";
+  position: absolute;
+  left: 0.45em;
+  top: -1px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid var(--ink);
+  transform: translateX(-50%);
 }
 
 .trajectory li {
-  margin-bottom: 0.55em;
-  padding-left: 0.15em;
+  position: relative;
+  margin: 0;
+  padding: 0 0 1.1em;
+}
+
+.trajectory li:last-child {
+  padding-bottom: 0;
+}
+
+.trajectory li::before {
+  content: "";
+  position: absolute;
+  left: -1.55em;
+  top: 0.7275em;
+  width: 0.42em;
+  height: 0.42em;
+  border-radius: 50%;
+  background: var(--ink);
+  transform: translate(-50%, -50%);
+}
+
+.trajectory li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: -1.55em;
+  top: 0.7275em;
+  width: 2px;
+  height: 100%;
+  background: var(--ink);
+  transform: translateX(-50%);
 }
 
 .trajectory-row {
