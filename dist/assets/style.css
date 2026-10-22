@@ -279,9 +279,10 @@ main a {
 }
 
 .trajectory {
+  --trajectory-line: rgba(0, 0, 0, 0.35);
   position: relative;
   margin: 0 0 1.3em;
-  padding: 1.1em 0 0 2em;
+  padding: 0.15em 0 0 2em;
   list-style: none;
 }
 
@@ -289,10 +290,10 @@ main a {
   content: "";
   position: absolute;
   left: 0.45em;
-  top: 0;
-  width: 2px;
-  height: 1.83em;
-  background: var(--ink);
+  top: calc(0.15em + 7px);
+  width: 4px;
+  height: calc(0.7275em - 7px);
+  background: var(--trajectory-line);
   transform: translateX(-50%);
 }
 
@@ -300,10 +301,10 @@ main a {
   content: "";
   position: absolute;
   left: 0.45em;
-  top: -1px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 8px solid var(--ink);
+  top: 0.15em;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 7px solid var(--trajectory-line);
   transform: translateX(-50%);
 }
 
@@ -334,9 +335,9 @@ main a {
   position: absolute;
   left: -1.55em;
   top: 0.7275em;
-  width: 2px;
+  width: 4px;
   height: 100%;
-  background: var(--ink);
+  background: var(--trajectory-line);
   transform: translateX(-50%);
 }
 
